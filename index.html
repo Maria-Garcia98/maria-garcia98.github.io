@@ -474,6 +474,11 @@ dialog::backdrop{background:rgba(5,7,26,.7);backdrop-filter:blur(4px)}
 .bcount{font-size:20px;color:var(--muted);min-width:15ch;text-align:center}
 .rbtn:disabled{opacity:.35;cursor:default}
 .book:focus-visible .book-stage{outline:3px solid var(--cobalt);outline-offset:4px}
+
+/* Safari: buttons don't stretch in grid/flex by default */
+.card{width:100%;justify-self:stretch;align-self:start}
+.card .art,.card .card-meta{width:100%}
+.shot{width:100%}
 /* flow */
 html{scroll-behavior:smooth}
 .rv-pre{transform:translateY(34px)}
@@ -560,7 +565,7 @@ dialog{overscroll-behavior:contain}
         <dl class="facts">
           <div><dt>Education</dt><dd>M.S. Graphic Information Technology, UX/UI · ASU</dd></div>
           <div><dt>Also</dt><dd>B.A. Studio Arts · University of Arizona</dd></div>
-          <div><dt>Toolkit</dt><dd>Figma, Adobe CC, After Effects, HTML/CSS</dd></div>
+          <div><dt>Toolkit</dt><dd>Figma, Adobe CC, After Effects, HTML/CSS, GitHub, Claude Code</dd></div>
           <div><dt>Platforms</dt><dd>Drupal (Quickstart), Shopify, Bootstrap</dd></div>
           <div><dt>Accessibility</dt><dd>WCAG, Silktide, Siteimprove</dd></div>
           <div><dt>Location</dt><dd>Tucson, AZ · open to relocating</dd></div>
