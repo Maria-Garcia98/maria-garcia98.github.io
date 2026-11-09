@@ -476,7 +476,12 @@ dialog::backdrop{background:rgba(5,7,26,.7);backdrop-filter:blur(4px)}
 .book:focus-visible .book-stage{outline:3px solid var(--cobalt);outline-offset:4px}
 
 /* Safari: buttons don't stretch in grid/flex by default */
-.card{width:100%;justify-self:stretch;align-self:start}
+.card{width:100%;justify-self:stretch;align-self:start;text-decoration:none;color:inherit;display:flex}
+.card .art{display:block;width:100%;height:0!important;min-height:0;aspect-ratio:auto!important;padding-top:75%}
+.card.feat .art{padding-top:62.5%}
+.card.wide .art{padding-top:42.857%}
+@media (max-width:600px){.card.wide .art,.card.feat .art{padding-top:75%}}
+.card .art>.a{position:absolute;inset:0}
 .card .art,.card .card-meta{width:100%}
 .shot{width:100%}
 /* flow */
@@ -911,16 +916,16 @@ function art(p){
 
 /* grid + filters */
 const grid=document.getElementById("grid"),filters=document.getElementById("filters");
-grid.innerHTML=P.map((p,i)=>`<button class="card${p.feat?" feat":""}${p.wide?" wide":""}" data-cat="${p.cat}" data-i="${i}" type="button" data-cursor="View project" aria-label="Open ${p.title}">
+grid.innerHTML=P.map((p,i)=>`<a href="#${p.id}" class="card${p.feat?" feat":""}${p.wide?" wide":""}" data-cat="${p.cat}" data-i="${i}" data-cursor="View project" aria-label="Open ${p.title}">
   <div class="art">${art(p)}<span class="chtag">${ch(i)}</span>${p.isNew?`<span class="newtag">New</span>`:""}${p.tag?`<span class="newtag">${p.tag}</span>`:""}</div>
   <div class="card-meta"><div><h3>${p.title}</h3><div class="sub">${p.sub}</div></div><span class="yr">${p.award?`<b>${p.award}</b>`:""}${p.year}</span></div>
-</button>`).join("");
+</a>`).join("");
 filters.innerHTML=CATS.map(([k,l],i)=>`<button class="chip" type="button" data-f="${k}" aria-pressed="${i===0}">${l}</button>`).join("");
 filters.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;
   filters.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c===b));
   const go=()=>grid.querySelectorAll(".card").forEach(c=>{const p=P[c.dataset.i];c.hidden=!(b.dataset.f==="all"||p.cat===b.dataset.f);c.classList.toggle("feat",b.dataset.f==="all"&&!!p.feat);c.classList.toggle("wide",b.dataset.f==="all"&&!!p.wide)});
   if(document.startViewTransition&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.startViewTransition(go);else go();});
-grid.addEventListener("click",e=>{const c=e.target.closest(".card");if(c)openCase(+c.dataset.i,true,c.querySelector(".art"))});
+grid.addEventListener("click",e=>{const c=e.target.closest(".card");if(c)e.preventDefault();if(c)openCase(+c.dataset.i,true,c.querySelector(".art"))});
 document.querySelector(".guide").textContent=`Tap the TV to flip channels. ${P.length} projects on air.`;
 
 /* ticker */
@@ -1110,7 +1115,7 @@ function openCase(i,push=true,fromEl){
   if(push&&location.hash!=="#"+p.id)history.replaceState(null,"","#"+p.id);
 }
 function closeCase(){if(reduce||!dlg.open)return dlg.close();const a=dlg.animate([{opacity:1,transform:"none"},{opacity:0,transform:"translateY(18px) scale(.98)"}],{duration:200,easing:"ease-in"});a.onfinish=()=>dlg.close()}
-dlg.addEventListener("close",()=>{stopSpin();dlg.querySelectorAll("video").forEach(v=>v.pause());if(P.some(p=>"#"+p.id===location.hash))history.replaceState(null,"","#work")});
+dlg.addEventListener("close",()=>{stopSpin();dlg.querySelectorAll("video").forEach(v=>v.pause());if(P.some(p=>"#"+p.id===location.hash))history.replaceState(null,"",location.pathname+location.search)});
 dlg.addEventListener("click",e=>{if(e.target===dlg)closeCase()});
 document.getElementById("nextBtn").onclick=()=>openCase(cur_+1);
 document.getElementById("prevBtn").onclick=()=>openCase(cur_-1);
