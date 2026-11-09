@@ -1,0 +1,1131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Maria Garcia, UX and graphic designer in Tucson, AZ. Websites, brands, campaigns and print for the University of Arizona.">
+<meta property="og:title" content="Maria Garcia, UX & Graphic Designer">
+<meta property="og:description" content="Websites, brands, campaigns and print. Lead designer at the University of Arizona.">
+<meta property="og:image" content="og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Maria Garcia | UX & Graphic Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Host+Grotesk:wght@400;500;600;700&family=VT323&display=swap">
+<style>
+/* Layout: a broadcast. Serif headline beside a CRT that flips through projects as channels, then the lineup, a test-card about, an interview transcript, and a sign-off. One cobalt, everything else ink and paper. */
+:root{
+  --bg:#ECEEF3; --surface:#FFFFFF; --ink:#0D1233; --muted:#596080; --line:#D2D6E3;
+  --cobalt:#1F38E6; --tint:#AEB8FF; --navy:#121A4D; --on-cobalt:#FFFFFF;
+  --pink:var(--cobalt); --sun:var(--tint); --blue:var(--navy); --on-pink:var(--on-cobalt);
+  --f-serif:"Instrument Serif","Times New Roman",Georgia,serif;
+  --f-sans:"Host Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-osd:"VT323",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#080B1C; --surface:#121738; --ink:#E9EBF7; --muted:#9BA1C3; --line:#252B54;
+  --cobalt:#5E6CFF; --tint:#8E9AFF; --navy:#1A2163; --on-cobalt:#FFFFFF; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#080B1C; --surface:#121738; --ink:#E9EBF7; --muted:#9BA1C3; --line:#252B54;
+  --cobalt:#5E6CFF; --tint:#8E9AFF; --navy:#1A2163; --on-cobalt:#FFFFFF; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:6px}
+h1,h2,h3{text-wrap:balance;margin:0;font-weight:400}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.osd{font-family:var(--f-osd);font-size:20px;line-height:1;letter-spacing:.04em;text-transform:uppercase}
+.label{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+em{font-style:italic}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px)}
+.nav .wrap{display:flex;align-items:center;gap:18px;padding-block:16px;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--f-serif);font-size:26px;text-decoration:none;line-height:1}
+.lamp{display:inline-flex;align-items:center;gap:8px;padding:5px 10px 4px;border:1.5px solid var(--cobalt);border-radius:6px;color:var(--cobalt)}
+.lamp i{width:9px;height:9px;border-radius:50%;background:var(--cobalt);box-shadow:0 0 10px var(--cobalt)}
+.lamp.flick{animation:flick 1.2s steps(1) 1}
+@keyframes flick{0%,20%,40%{opacity:.2}10%,30%,55%,100%{opacity:1}48%{opacity:.35}}
+.nav nav{margin-left:auto;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.nav nav a{text-decoration:none;font-weight:500;font-size:15px}
+.nav nav a:hover{color:var(--cobalt)}
+@media (max-width:560px){.nav nav a.hide-s{display:none}.lamp span{display:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(36px,6vw,80px) 40px}
+.hero h1{font-family:var(--f-serif);font-size:clamp(46px,6.6vw,96px);line-height:.98;letter-spacing:-.01em}
+.hero h1 em{color:var(--cobalt)}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;color:var(--muted);font-size:15px}
+.hero .meta span+span::before{content:"/";margin-right:18px;color:var(--line)}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:99px;font:600 15px/1 var(--f-sans);text-decoration:none;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;transition:transform .15s,background .15s,color .15s}
+.btn.solid{background:var(--cobalt);border-color:var(--cobalt);color:var(--on-cobalt)}
+.btn:hover{transform:translateY(-2px)}
+@media (max-width:860px){.hero{grid-template-columns:1fr}}
+
+/* tv */
+.tvwrap{display:flex;flex-direction:column;align-items:center}
+.antenna{position:relative;width:46%;height:clamp(40px,7vw,70px)}
+.antenna::before,.antenna::after{content:"";position:absolute;bottom:0;left:50%;width:3px;height:100%;background:var(--ink);transform-origin:bottom center;border-radius:3px}
+.antenna::before{transform:rotate(-34deg)}.antenna::after{transform:rotate(28deg)}
+.antenna i{position:absolute;bottom:-6px;left:calc(50% - 16px);width:32px;height:14px;border-radius:16px 16px 0 0;background:var(--ink)}
+.tv{width:100%;max-width:540px;background:var(--cobalt);border-radius:28px;padding:clamp(14px,2.4vw,24px);display:grid;grid-template-columns:1fr clamp(56px,11%,74px);gap:clamp(12px,2vw,20px);box-shadow:inset 0 -8px 0 rgba(0,0,0,.18),0 30px 60px -30px rgba(13,18,51,.55);cursor:pointer;position:relative}
+.screen{position:relative;aspect-ratio:4/3;border-radius:18% / 22%;overflow:hidden;background:#05071a;border:6px solid var(--navy);box-shadow:inset 0 0 0 2px rgba(255,255,255,.08)}
+.screen .chan{position:absolute;inset:0;transition:filter .2s}
+.screen .chan .a{position:absolute;inset:0}
+.screen::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:4;
+  background:repeating-linear-gradient(0deg,rgba(0,0,0,.16) 0 1px,transparent 1px 3px),radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.45) 100%)}
+.osd-ch{position:absolute;right:7%;top:7%;z-index:5;color:#9CFF9C;text-shadow:0 0 6px rgba(156,255,156,.8);font-size:clamp(22px,3vw,30px)}
+.osd-title{position:absolute;left:7%;bottom:8%;right:7%;z-index:5;color:#fff;text-shadow:0 1px 0 #000,0 0 8px rgba(0,0,0,.8);font-size:clamp(18px,2.4vw,24px)}
+canvas.static{position:absolute;inset:0;width:100%;height:100%;z-index:6;image-rendering:pixelated;opacity:0;pointer-events:none}
+canvas.static.on{opacity:1}
+.panel{display:flex;flex-direction:column;align-items:center;gap:14px;padding-top:6px}
+.knob{width:100%;aspect-ratio:1;border-radius:50%;background:var(--navy);position:relative;box-shadow:inset 0 -4px 0 rgba(0,0,0,.3);transition:transform .35s cubic-bezier(.3,1.6,.5,1)}
+.knob::after{content:"";position:absolute;left:50%;top:10%;width:4px;height:34%;background:var(--tint);transform:translateX(-50%);border-radius:2px}
+.grille{flex:1;width:100%;min-height:40px;background:repeating-linear-gradient(0deg,var(--navy) 0 3px,transparent 3px 8px);border-radius:6px;opacity:.85}
+.legs{display:flex;justify-content:space-between;width:70%;max-width:380px}
+.legs i{width:14px;height:26px;background:var(--ink);border-radius:0 0 4px 4px}
+.legs i:first-child{transform:skewX(14deg)}.legs i:last-child{transform:skewX(-14deg)}
+.remote{display:flex;align-items:center;gap:10px;margin-top:18px;flex-wrap:wrap;justify-content:center}
+.rbtn{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ink);background:var(--surface);color:var(--ink);font:600 18px/1 var(--f-sans);cursor:pointer}
+.rbtn:hover{background:var(--ink);color:var(--bg)}
+.guide{color:var(--muted);font-size:14px;text-align:center;margin-top:10px}
+
+/* custom cursor */
+.cur{position:fixed;left:0;top:0;z-index:60;pointer-events:none;padding:8px 12px 6px;border-radius:99px;background:var(--cobalt);color:var(--on-cobalt);font-family:var(--f-osd);font-size:18px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;transform:translate(-50%,-150%) scale(.6);opacity:0;transition:opacity .15s,transform .15s}
+.cur.show{opacity:1;transform:translate(-50%,-150%) scale(1)}
+
+/* ticker */
+.ticker{margin-top:30px;border-block:1.5px solid var(--ink);overflow:hidden;background:var(--surface)}
+.ticker .track{display:flex;gap:44px;width:max-content;padding-block:12px;animation:tick 38s linear infinite}
+.ticker span{font-family:var(--f-serif);font-size:24px;white-space:nowrap}
+.ticker span b{font-family:var(--f-osd);font-weight:400;color:var(--cobalt);font-size:22px;margin-right:10px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* sections */
+section{padding-block:clamp(64px,9vw,110px) 0}
+.shead{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:18px;margin-bottom:30px}
+.shead h2{font-family:var(--f-serif);font-size:clamp(46px,7vw,92px);line-height:.95}
+.shead h2 em{color:var(--cobalt)}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font:500 14px/1 var(--f-sans);padding:10px 14px;border-radius:99px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+
+.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:30px 22px}
+.card{grid-column:span 2;display:flex;flex-direction:column;gap:12px;text-align:left;background:none;border:0;padding:0;color:inherit;font:inherit;cursor:pointer;min-width:0}
+.card.feat{grid-column:span 3}
+.card[hidden]{display:none!important}
+.art{position:relative;aspect-ratio:4/3;border-radius:14px;overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.card.feat .art{aspect-ratio:16/10}
+.art::after{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;opacity:0;transition:opacity .25s;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px)}
+.card:hover .art::after,.card:focus-visible .art::after{opacity:1}
+.art .chtag{position:absolute;left:12px;top:10px;z-index:5;color:#fff;font-family:var(--f-osd);font-size:20px;text-shadow:0 1px 2px rgba(0,0,0,.6)}
+.card:hover .art{transform:translateY(-5px)}
+.card-meta{display:flex;justify-content:space-between;gap:14px;align-items:baseline;border-top:1px solid var(--line);padding-top:12px}
+.card h3{font-family:var(--f-serif);font-size:28px;line-height:1.05}
+.card .sub{color:var(--muted);font-size:14px;margin-top:4px}
+.card .yr{font-size:13px;color:var(--muted);flex:none;text-align:right}
+.card .yr b{display:block;color:var(--cobalt);font-weight:600}
+@media (max-width:900px){.card,.card.feat{grid-column:span 3}}
+@media (max-width:600px){.grid{grid-template-columns:1fr}.card,.card.feat{grid-column:span 1}}
+
+/* drawn covers (cobalt edition) */
+.a{position:absolute;inset:0}
+.bg-blue{background:var(--blue)}.bg-pink{background:var(--pink)}.bg-sun{background:var(--sun)}.bg-ink{background:var(--navy)}.bg-surf{background:var(--surface)}
+.browser{position:absolute;left:9%;right:9%;top:12%;bottom:-6%;background:#fff;border-radius:10px 10px 0 0;box-shadow:0 20px 40px -10px rgba(0,0,0,.35);overflow:hidden}
+.browser .bar{height:22px;background:#E3E6F0;display:flex;gap:5px;align-items:center;padding-left:10px}
+.browser .bar i{width:7px;height:7px;border-radius:50%;background:#9AA0BE}
+.su-banner{margin:14px;padding:14px;border-radius:8px;background:var(--cobalt);display:flex;flex-direction:column;gap:8px}
+.su-banner .t{height:10px;width:55%;background:#fff;opacity:.85;border-radius:3px}
+.su-banner .btns{display:flex;gap:8px}
+.su-banner .btns span{height:22px;width:34%;border-radius:99px;background:var(--tint);transition:transform .3s}
+.su-banner .btns span+span{background:#fff}
+.card:hover .su-banner .btns span{transform:scale(1.08)}
+.lines{margin:0 14px;display:grid;gap:7px}
+.lines i{height:7px;border-radius:3px;background:#E3E6F0}
+.lines i:nth-child(2){width:80%}.lines i:nth-child(3){width:62%}
+.shop{position:absolute;inset:16% 8% 12% 8%;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.prod{background:#fff;border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:6px;box-shadow:0 10px 24px -12px rgba(0,0,0,.4);transition:transform .3s}
+.prod .plate{aspect-ratio:1;border-radius:50%;background:var(--cobalt);border:6px solid #EEF0F7}
+.prod:nth-child(2) .plate{background:var(--navy)}.prod:nth-child(3) .plate{background:var(--tint)}
+.prod .ln{height:6px;border-radius:3px;background:#E3E6F0}
+.prod .add{margin-top:auto;height:16px;border-radius:99px;background:#0D1233}
+.card:hover .prod:nth-child(2){transform:translateY(-8px)}
+.cartpill{position:absolute;right:6%;top:6%;background:#0D1233;color:#fff;font-family:var(--f-osd);font-size:16px;padding:4px 9px 3px;border-radius:99px;z-index:2}
+.phone{position:absolute;width:38%;left:31%;top:9%;bottom:-8%;background:#fff;border-radius:22px 22px 0 0;border:5px solid #05071a;border-bottom:0;overflow:hidden}
+.phone .sky{height:46%;background:var(--tint);position:relative}
+.phone .mtn{position:absolute;inset:0;background:var(--cobalt);clip-path:polygon(0 100%,0 55%,30% 25%,52% 60%,72% 30%,100% 70%,100% 100%)}
+.phone .row{margin:9px 10px 0;height:9px;border-radius:3px;background:#E3E6F0}
+.phone .cta{margin:12px 10px 0;height:22px;border-radius:99px;background:#0D1233}
+.phone-side{position:absolute;font-family:var(--f-osd);font-size:16px;color:#0D1233;background:#fff;padding:3px 8px 2px;border-radius:6px}
+.persona{position:absolute;left:12%;top:16%;width:52%;background:#fff;border-radius:12px;padding:14px;display:grid;grid-template-columns:42px 1fr;gap:6px 12px;box-shadow:0 14px 30px -14px rgba(0,0,0,.4);transform:rotate(-3deg)}
+.persona .av{grid-row:span 2;width:42px;height:42px;border-radius:50%;background:var(--navy)}
+.persona i{height:8px;border-radius:3px;background:#E3E6F0;align-self:center}
+.persona i.w{width:60%}
+.persona .full{grid-column:1/-1;height:7px}
+.sticky{position:absolute;right:12%;bottom:14%;width:32%;aspect-ratio:1;background:var(--tint);transform:rotate(5deg);padding:10px;font-family:var(--f-serif);font-style:italic;font-size:clamp(14px,1.6vw,20px);color:#0D1233;line-height:1.1;box-shadow:0 10px 20px -10px rgba(0,0,0,.4)}
+.mail{position:absolute;width:58%;left:21%;aspect-ratio:3/4;background:#fff;border-radius:8px;box-shadow:0 14px 30px -14px rgba(0,0,0,.45);padding:10px;display:flex;flex-direction:column;gap:6px;transition:transform .4s}
+.mail .hd{height:28%;border-radius:5px;background:var(--cobalt)}
+.mail i{height:6px;border-radius:3px;background:#E3E6F0}
+.mail.m1{top:20%;transform:rotate(-8deg) translateX(-14%)}
+.mail.m2{top:15%;transform:rotate(4deg) translateX(10%)}
+.mail.m3{top:10%}
+.mail.m3 .hd{background:var(--tint)}
+.card:hover .mail.m1{transform:rotate(-12deg) translateX(-24%)}
+.card:hover .mail.m2{transform:rotate(8deg) translateX(20%)}
+.medalbig{position:absolute;right:7%;top:7%;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-osd);font-size:16px;color:#0D1233;z-index:3;transform:rotate(-10deg)}
+.g{background:#E9C04A}.s{background:#C9CED1}.b{background:#D59A63}
+.spread{position:absolute;inset:16% 7% 14%;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 18px 34px -16px rgba(0,0,0,.5);transition:transform .4s}
+.spread .pg{background:#fff;padding:10px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.spread .pg:first-child{background:var(--cobalt);color:#fff;font-family:var(--f-serif);font-style:italic;font-size:clamp(24px,4vw,44px);line-height:.85;justify-content:flex-end}
+.spread .pg .ph{flex:1;border-radius:4px;background:var(--tint)}
+.spread .pg i{height:6px;border-radius:3px;background:#E3E6F0}
+.card:hover .spread{transform:perspective(600px) rotateY(-8deg)}
+.swirl{position:absolute;left:50%;top:52%;width:52%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:repeating-radial-gradient(circle at 50% 50%,var(--cobalt) 0 9%,#fff 9% 16%);transition:transform .8s}
+.card:hover .swirl{transform:translate(-50%,-50%) rotate(180deg) scale(1.05)}
+.cone{position:absolute;left:50%;bottom:-2%;width:22%;aspect-ratio:1/1.3;transform:translateX(-50%);background:var(--navy);clip-path:polygon(0 0,100% 0,50% 100%)}
+.burst{position:absolute;left:50%;top:50%;width:56%;aspect-ratio:1;transform:translate(-50%,-50%);background:var(--tint);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);transition:transform .6s}
+.card:hover .burst{transform:translate(-50%,-50%) rotate(36deg)}
+.wordmark{position:absolute;left:8%;bottom:8%;font-family:var(--f-serif);font-style:italic;font-size:clamp(28px,4.6vw,44px);color:#fff}
+.store{position:absolute;inset:14% 8% 0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;align-items:end}
+.store .pane{height:100%;border-radius:8px 8px 0 0;background:repeating-linear-gradient(135deg,var(--cobalt) 0 14px,var(--tint) 14px 28px);transition:background-position .6s}
+.store .pane:nth-child(2){background:#fff;display:grid;place-items:center;font-family:var(--f-serif);font-size:clamp(22px,3.4vw,34px);color:#0D1233}
+.card:hover .store .pane:not(:nth-child(2)){background-position:28px 0}
+.bus{position:absolute;left:-4%;right:10%;top:30%;height:44%;background:#fff;border-radius:14px 30px 10px 10px;overflow:hidden;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.bus .wrap-a{position:absolute;inset:0;background:linear-gradient(100deg,transparent 0 30%,var(--cobalt) 30% 55%,var(--tint) 55% 70%,transparent 70%)}
+.bus .win{position:absolute;top:12%;height:30%;width:13%;background:#0D1233;border-radius:4px;opacity:.85}
+.wheel{position:absolute;bottom:18%;width:12%;aspect-ratio:1;border-radius:50%;background:#05071a;border:5px solid #fff;transition:transform .8s}
+.card:hover .bus{transform:translateX(8%)}
+.card:hover .wheel{transform:translateX(8%) rotate(200deg)}
+.road{position:absolute;left:0;right:0;bottom:12%;height:3px;background:repeating-linear-gradient(90deg,#fff 0 18px,transparent 18px 32px);opacity:.5}
+.stand{position:absolute;left:30%;width:40%;top:14%;bottom:0;background:var(--cobalt);border-radius:12px 12px 0 0;overflow:hidden}
+.stand .wave{position:absolute;left:-10%;right:-10%;top:42%;height:22%;background:#fff;border-radius:50%;transform:rotate(-12deg)}
+.stand .door{position:absolute;left:14%;right:14%;bottom:0;height:22%;background:#05071a;opacity:.85;border-radius:6px 6px 0 0}
+.env{position:absolute;width:44%;aspect-ratio:3/2;background:#fff;border-radius:6px;box-shadow:0 12px 26px -12px rgba(0,0,0,.45);overflow:hidden}
+.env::before{content:"";position:absolute;inset:0;background:var(--tint);clip-path:polygon(0 0,100% 0,50% 58%)}
+.env.e1{left:10%;top:22%;transform:rotate(-7deg)}
+.env.e2{right:10%;top:36%;transform:rotate(6deg)}
+.env.e2::before{background:var(--cobalt)}
+.ink-label{position:absolute;left:8%;bottom:8%;font-family:var(--f-osd);font-size:18px;color:#fff;opacity:.9;text-transform:uppercase}
+
+/* about: test card */
+.about{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.testcard{position:relative;aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:#05071a;border:10px solid var(--ink);box-shadow:0 30px 60px -30px rgba(13,18,51,.5)}
+.bars{position:absolute;inset:0 0 28%;display:grid;grid-template-columns:repeat(7,1fr)}
+.bars i:nth-child(1){background:#fff}.bars i:nth-child(2){background:#D6DBFF}.bars i:nth-child(3){background:#AEB8FF}.bars i:nth-child(4){background:#7D8CFF}.bars i:nth-child(5){background:#4E62F5}.bars i:nth-child(6){background:#1F38E6}.bars i:nth-child(7){background:#121A4D}
+.tc-low{position:absolute;inset:72% 0 0;background:#05071a;display:flex;align-items:center;justify-content:space-between;padding:0 6%;color:#fff}
+.tc-low .osd{font-size:clamp(20px,2.6vw,30px)}
+.tc-circle{position:absolute;left:50%;top:36%;width:38%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;border:3px solid #fff;display:grid;place-items:center;background:rgba(5,7,26,.55);color:#fff;font-family:var(--f-serif);font-size:clamp(26px,4vw,48px);font-style:italic}
+.testcard.power .inner{animation:crt .9s ease-out 1}
+.testcard .inner{position:absolute;inset:0}
+@keyframes crt{0%{transform:scale(1,.004);filter:brightness(4)}35%{transform:scale(1,.004);filter:brightness(4)}60%{transform:scale(1,1.06);filter:brightness(1.6)}100%{transform:scale(1,1);filter:brightness(1)}}
+.about .big{font-family:var(--f-serif);font-size:clamp(30px,3.6vw,46px);line-height:1.1;margin:0 0 22px}
+.about .big em{color:var(--cobalt)}
+.about p{max-width:60ch;margin:0 0 14px}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;margin-top:22px;border-top:1px solid var(--line)}
+.facts div{padding:12px 0;border-bottom:1px solid var(--line);min-width:0}
+.facts dt{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.facts dd{margin:4px 0 0;font-weight:500;font-size:15px}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+@media (max-width:480px){.facts{grid-template-columns:1fr}}
+
+/* interview */
+.transcript{display:grid;gap:0;border-top:1.5px solid var(--ink)}
+.qa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:16px 48px;padding-block:26px;border-bottom:1px solid var(--line)}
+.qa h3{font-family:var(--f-serif);font-size:clamp(26px,3vw,36px);line-height:1.08}
+.qa h3::before{content:"Q.";color:var(--cobalt);margin-right:10px;font-style:italic}
+.qa p{margin:0;max-width:62ch}
+.qa p::before{content:"MG";font-family:var(--f-osd);font-size:18px;color:var(--cobalt);margin-right:10px}
+@media (max-width:760px){.qa{grid-template-columns:1fr}}
+
+/* signoff */
+.signoff{margin-top:clamp(64px,9vw,110px);background:var(--cobalt);color:var(--on-cobalt);border-radius:28px;overflow:hidden;position:relative}
+.signoff .inner{padding:clamp(30px,6vw,72px);position:relative;z-index:1}
+.signoff h2{font-family:var(--f-serif);font-size:clamp(48px,8.4vw,120px);line-height:.92;max-width:11ch}
+.signoff .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;align-items:center}
+.emailbox{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:6px 6px 6px 18px;max-width:100%;min-width:0}
+.emailbox span{font-size:15px;user-select:all;overflow-wrap:anywhere}
+.signoff .btn{border-color:#fff;color:#fff}
+.signoff .btn.solid{background:#fff;color:#1F38E6;border-color:#fff}
+.signoff .scan{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.08) 0 1px,transparent 1px 4px)}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-block:26px 44px;color:var(--muted);font-size:14px}
+
+/* case dialog */
+dialog{border:0;padding:0;background:var(--bg);color:var(--ink);width:min(1040px,calc(100vw - 24px));max-height:calc(100dvh - 24px);border-radius:24px;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+dialog::backdrop{background:rgba(5,7,26,.7);backdrop-filter:blur(4px)}
+.case-art{position:relative;height:clamp(210px,34vw,350px);overflow:hidden}
+.case-art::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.14) 0 1px,transparent 1px 3px)}
+.case-close{position:absolute;right:14px;top:14px;z-index:5;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#0D1233;font-size:22px;cursor:pointer}
+.case-art .osd-ch{z-index:5}
+.case-body{display:grid;grid-template-columns:250px 1fr;gap:clamp(20px,4vw,52px);padding:clamp(22px,4vw,48px)}
+.case-body h2{font-family:var(--f-serif);font-size:clamp(38px,5.6vw,64px);line-height:.98;margin:6px 0 14px}
+.side{display:grid;gap:14px;align-content:start;margin:0}
+.side div{border-top:1px solid var(--line);padding-top:10px}
+.side dt{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.side dd{margin:4px 0 0;font-weight:500;font-size:15px}
+.story{min-width:0}
+.story .lead{font-family:var(--f-serif);font-size:clamp(22px,2.4vw,28px);line-height:1.25;max-width:42ch;margin:0 0 20px}
+.story h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--cobalt);margin:26px 0 8px;font-weight:600}
+.story p{max-width:62ch;margin:0}
+.story ol{margin:0;padding:0;list-style:none;display:grid;gap:9px;counter-reset:p}
+.story ol li{counter-increment:p;display:grid;grid-template-columns:34px 1fr;gap:8px;max-width:62ch}
+.story ol li::before{content:counter(p,decimal-leading-zero);font-family:var(--f-osd);font-size:20px;color:var(--cobalt);line-height:1.2}
+.result{margin-top:26px;padding:20px 22px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
+.result h4{margin-top:0}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.nextprev{display:flex;justify-content:space-between;gap:10px;padding:0 clamp(22px,4vw,48px) clamp(22px,4vw,40px)}
+@media (max-width:760px){.case-body{grid-template-columns:1fr}.side{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:99px;font-size:14px;font-weight:600;z-index:70}
+/* photo covers */
+.card.wide{grid-column:1/-1}
+.card.wide .art{aspect-ratio:21/9}
+@media (max-width:600px){.card.wide .art{aspect-ratio:4/3}}
+.a.cover{background:#05071a}
+.a.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.a.cover::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,.55),transparent 55%)}
+.a.cover .logo{position:absolute;inset:auto auto 8% 5%;width:min(40%,340px);height:auto;z-index:2;filter:drop-shadow(0 2px 10px rgba(0,0,0,.45))}
+.screen .a.cover .logo{width:52%}
+.card:hover .a.cover img{transform:scale(1.04)}
+.newtag{position:absolute;right:12px;top:10px;z-index:5;background:#fff;color:#0D1233;font-family:var(--f-osd);font-size:18px;padding:3px 9px 2px;border-radius:6px}
+
+/* rich case study (Sammy's) */
+.rich{padding:0 clamp(22px,4vw,48px) clamp(16px,3vw,28px);display:grid;gap:clamp(44px,6vw,72px)}
+.rich section{padding:0}
+.rich .rh{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:10px 40px;align-items:end;margin-bottom:22px}
+.rich .rh h3{font-family:var(--f-serif);font-size:clamp(32px,4.4vw,52px);line-height:1}
+.rich .rh h3 em{color:var(--cobalt)}
+.rich .rh p{margin:0;color:var(--muted);max-width:56ch}
+@media (max-width:760px){.rich .rh{grid-template-columns:1fr}}
+.ba{--x:50%;position:relative;aspect-ratio:3/2;border-radius:18px;overflow:hidden;background:#000;user-select:none;touch-action:pan-y}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .before{clip-path:inset(0 calc(100% - var(--x)) 0 0);z-index:1}
+.ba .bal{position:absolute;top:14px;z-index:3;font-family:var(--f-osd);font-size:20px;background:rgba(5,7,26,.75);color:#fff;padding:4px 10px 2px;border-radius:6px}
+.ba .bal.l{left:14px}.ba .bal.r{right:14px}
+.ba .line{position:absolute;top:0;bottom:0;left:var(--x);width:2px;background:#fff;z-index:3;transform:translateX(-1px);pointer-events:none}
+.ba .line i{position:absolute;top:50%;left:50%;width:46px;height:46px;transform:translate(-50%,-50%);border-radius:50%;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.35);display:grid;place-items:center;font-style:normal;color:#0D1233;font-weight:700}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;margin:0;cursor:ew-resize;z-index:4}
+.ba input:focus-visible ~ .line i{outline:3px solid var(--cobalt);outline-offset:3px}
+.thumbs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
+.shot{border:0;padding:0;background:none;cursor:zoom-in;display:block;border-radius:12px;overflow:hidden;position:relative;width:100%}
+.shot img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.shot:hover img{transform:scale(1.04)}
+.shot .cap{position:absolute;left:8px;bottom:8px;font-family:var(--f-osd);font-size:16px;background:rgba(5,7,26,.75);color:#fff;padding:2px 8px 1px;border-radius:5px}
+.thumbs .shot{aspect-ratio:4/3}
+.brandband{background:#7B9373;border-radius:18px;padding:clamp(28px,6vw,64px) 20px;display:grid;place-items:center}
+.brandband img{width:min(560px,92%);height:auto}
+.swatches{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}
+.sw{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+.sw b{display:block;height:74px}
+.sw div{padding:10px 12px;font-size:13px}
+.sw div strong{display:block;font-size:14px}
+.sw div span{color:var(--muted);font-variant-numeric:tabular-nums}
+.typespec{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.typespec div{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--surface)}
+.typespec dt{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.typespec dd{margin:4px 0 0;font-weight:600}
+@media (max-width:600px){.swatches{grid-template-columns:repeat(2,minmax(0,1fr))}.typespec{grid-template-columns:1fr}}
+.strip{display:flex;gap:12px;overflow-x:auto;padding-bottom:10px;margin-top:12px;scroll-snap-type:x mandatory}
+.strip .shot{flex:none;width:min(360px,78%);aspect-ratio:1224/792;scroll-snap-align:start;border:1px solid var(--line)}
+.polas{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;padding-block:10px}
+.polas .shot{aspect-ratio:4/5;border-radius:4px;box-shadow:0 14px 28px -14px rgba(0,0,0,.45);transition:transform .35s}
+.polas .shot:nth-child(odd){transform:rotate(-2.5deg)}.polas .shot:nth-child(even){transform:rotate(2deg) translateY(10px)}
+.polas .shot:hover{transform:rotate(0) scale(1.04);z-index:2}
+@media (max-width:760px){.polas{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+.roles div{border-top:2px solid var(--cobalt);padding-top:10px;font-size:15px}
+.roles b{display:block;font-family:var(--f-osd);font-weight:400;font-size:20px;color:var(--cobalt)}
+@media (max-width:600px){.roles{grid-template-columns:1fr}}
+.camp{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(20px,4vw,48px);align-items:end}
+.totem{display:flex;flex-direction:column;align-items:center}
+.totem .body{width:clamp(150px,20vw,210px);background:#141414;border-radius:16px;padding:10px 10px 26px;box-shadow:0 24px 50px -24px rgba(0,0,0,.6);position:relative}
+.totem .body::after{content:"";position:absolute;left:50%;bottom:9px;width:26px;height:6px;border-radius:3px;background:#7B9373;transform:translateX(-50%)}
+.totem video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:6px;background:#000}
+.totem .pole{width:26%;height:26px;background:#2a2a2a}
+.totem .foot{width:70%;height:12px;border-radius:8px 8px 4px 4px;background:#141414}
+.totem .lbl{margin-top:12px;font-size:13px;color:var(--muted);text-align:center}
+.phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,2vw,20px)}
+.ph{background:#111;border-radius:clamp(18px,3vw,30px);padding:clamp(5px,.8vw,8px);box-shadow:0 20px 40px -22px rgba(0,0,0,.6)}
+.ph .shot{aspect-ratio:9/16;border-radius:clamp(13px,2.4vw,22px)}
+.phones .lbl{grid-column:1/-1;font-size:13px;color:var(--muted);text-align:center}
+@media (max-width:640px){.camp{grid-template-columns:1fr;justify-items:center}}
+.feed{display:flex;gap:14px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory;margin-top:12px}
+.feed .shot{flex:none;width:min(300px,72%);aspect-ratio:4/5;scroll-snap-align:start}
+.note{margin-top:12px;font-size:14px;color:var(--muted)}
+#lb{width:min(1100px,calc(100vw - 24px));background:#05071a;border-radius:16px}
+#lb img{display:block;width:100%;max-height:calc(100dvh - 120px);object-fit:contain}
+#lb .lbbar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;color:#fff}
+#lb .lbbar span{font-family:var(--f-osd);font-size:20px}
+#lb button{width:40px;height:40px;border-radius:50%;border:0;background:#fff;color:#0D1233;font-size:20px;cursor:pointer}
+
+/* real covers */
+.a.bcover,.a.ccover,.a.fcover{overflow:hidden}
+.bwin{position:absolute;left:8%;right:8%;top:11%;bottom:-6%;background:#fff;border-radius:10px 10px 0 0;overflow:hidden;box-shadow:0 22px 44px -16px rgba(0,0,0,.5)}
+.bwin .bar,.fr .bar{height:22px;background:#E3E6F0;display:flex;gap:5px;align-items:center;padding:0 10px;flex:none}
+.bwin .bar i,.fr .bar i{width:7px;height:7px;border-radius:50%;background:#9AA0BE}
+.fr .bar span{margin-left:10px;font-size:11px;color:#596080;background:#fff;border-radius:99px;padding:1px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.bwin video{display:block;width:100%;height:calc(100% - 22px);object-fit:cover;object-position:top}
+.bwin img{display:block;width:100%;height:calc(100% - 22px);object-fit:cover;object-position:top;transition:object-position 2.4s cubic-bezier(.3,.1,.2,1)}
+.card:hover .bwin img{object-position:50% 38%}
+.ccover{display:grid;place-items:center;padding:7%}
+.ccover img{max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 18px 36px -16px rgba(0,0,0,.5);border-radius:4px;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.card:hover .ccover img{transform:scale(1.04) rotate(-1deg)}
+.fcover img{position:absolute;top:12%;width:34%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:6px;box-shadow:0 18px 32px -14px rgba(0,0,0,.5);transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.fcover img:nth-of-type(1){left:13%;transform:rotate(-8deg)}
+.fcover img:nth-of-type(2){left:33%;top:8%;z-index:2}
+.fcover img:nth-of-type(3){left:53%;transform:rotate(7deg)}
+.card:hover .fcover img:nth-of-type(1){transform:rotate(-12deg) translateX(-12%)}
+.card:hover .fcover img:nth-of-type(3){transform:rotate(11deg) translateX(12%)}
+.card:hover .fcover img:nth-of-type(2){transform:translateY(-4%)}
+.screen .bwin{left:12%;right:12%;top:14%}
+.case-art .ccover{padding:4%}
+
+/* frames inside case studies */
+.fr{margin:0;display:flex;flex-direction:column;gap:10px;min-width:0}
+.fr figcaption{font-size:13px;color:var(--muted)}
+.fr-browser>.bar{border-radius:12px 12px 0 0}
+.fr-browser video,.fr-browser .scroll{display:block;width:100%;border:1px solid var(--line);border-top:0;border-radius:0 0 12px 12px;background:#fff;margin-top:-10px}
+.fr-browser video{aspect-ratio:16/9;object-fit:cover;object-position:top}
+.fr .scroll{height:clamp(320px,52vh,560px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.fr .scroll img{display:block;width:100%;height:auto}
+.fr-square video{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;border:1px solid var(--line);background:#fff}
+.fr-bare video{display:block;width:100%;max-width:340px;margin:0 auto;aspect-ratio:552/1110;object-fit:contain}
+.fr-mail{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:10px;gap:8px}
+.fr-mail .mailhd{display:flex;flex-direction:column;gap:2px;padding:4px 6px 8px;border-bottom:1px solid var(--line);font-size:12px;min-width:0}
+.fr-mail .mailhd b{font-size:13px}
+.fr-mail .mailhd span{color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fr-mail .scroll{height:clamp(360px,58vh,520px);border-radius:8px;background:#fff}
+.fr-mail figcaption{padding:0 6px 2px}
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(14px,2.6vw,28px);align-items:start}
+.duo-wide{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}
+.duo-phone{grid-template-columns:minmax(0,.8fr) minmax(0,1fr);align-items:center}
+@media (max-width:760px){.duo,.duo-wide,.duo-phone{grid-template-columns:1fr}}
+.callout{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,3vw,28px);display:grid;gap:14px;justify-items:start;align-self:center}
+.callout p{margin:0;font-family:var(--f-serif);font-size:clamp(22px,2.4vw,28px);line-height:1.2}
+.mails{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,20px)}
+.mails-5{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+.mails-5 .fr{flex:none;width:min(300px,78%);scroll-snap-align:start}
+@media (max-width:760px){.mails{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.mails .fr{flex:none;width:min(300px,82%);scroll-snap-align:start}}
+.flip-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.flip-tabs button{font:500 14px/1 var(--f-sans);padding:10px 14px;border-radius:99px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.flip-tabs button[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.flip-stage{position:relative;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--line);max-width:100%}
+.flip-pg{position:absolute;inset:0;border:0;padding:0;background:none;cursor:zoom-in;opacity:0;transform:scale(1.02);transition:opacity .5s ease,transform .7s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.flip-pg.on{opacity:1;transform:none;pointer-events:auto}
+.flip-pg img{width:100%;height:100%;object-fit:contain;display:block}
+.bigshot{border:1px solid var(--line);background:#fff}
+.bigshot img{height:auto}
+.jump{display:inline-block;margin-top:18px;font-weight:600;color:var(--cobalt);text-decoration:none}
+.jump:hover{text-decoration:underline}
+
+/* floating mockups */
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-.6deg)}50%{transform:translateY(-3.5%) rotate(.6deg)}}
+.a.mcover{display:grid;place-items:center;overflow:hidden}
+.a.mcover img{max-width:84%;max-height:84%;object-fit:contain;animation:floaty 5.5s ease-in-out infinite;filter:drop-shadow(0 18px 22px rgba(0,0,0,.18))}
+.a.mcover.fit img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:cover;filter:none}
+.card:hover .a.mcover img{animation-duration:2.6s}
+.stage{border-radius:18px;background:#fff;border:1px solid var(--line);padding:clamp(10px,2vw,24px);display:grid;place-items:center;overflow:hidden}
+.stage .shot{background:none}
+.stage-warm{background:#F3E3CF}
+.stage-swirl{background:#FDF3E3 url(sw-swirl.jpg) center/cover}
+.floaty{max-width:100%;height:auto;animation:floaty 5.5s ease-in-out infinite}
+.launch3{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:clamp(12px,2vw,20px);align-items:stretch}
+.launch3 .stage{min-height:260px}
+.thumbs.tees{grid-template-columns:repeat(3,minmax(0,1fr))}
+.thumbs.tees .shot{aspect-ratio:892/1013;background:#fff;border:1px solid var(--line)}
+.thumbs.tees .shot img{object-fit:contain}
+.stage.punch{margin-top:12px;min-height:280px}
+.stage.punch .floaty{max-height:380px}
+@media (max-width:600px){.thumbs.tees{grid-template-columns:1fr}}
+.launch3 .floaty{max-height:420px}
+.thumbs.t2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.thumbs.t2 .shot{aspect-ratio:1224/792;border:1px solid var(--line)}
+.banners{display:grid;gap:10px}
+.banners .shot{aspect-ratio:4/1;border-radius:10px}
+.duo-robot{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:center}
+.duo-robot .floaty{max-height:380px}
+@media (max-width:760px){.launch3,.thumbs.t2{grid-template-columns:1fr}}
+.pans{display:grid;gap:12px}
+.shot.pan{border:1px solid var(--line);background:#1F1A3A}
+.shot.pan img{width:100%;height:auto;display:block;transform-origin:30% 50%;animation:drift 14s ease-in-out infinite alternate}
+.pans .shot.pan:nth-child(2) img{animation-delay:-5s;transform-origin:70% 50%}.pans .shot.pan:nth-child(3) img{animation-delay:-9s}
+.shot.pan:hover img{animation-play-state:paused}
+@keyframes drift{from{transform:scale(1)}to{transform:scale(1.07)}}
+.thumbs.vs3 .shot{aspect-ratio:3/4}
+@media (max-width:600px){.thumbs.vs3{grid-template-columns:1fr}.thumbs.vs3 .shot{aspect-ratio:4/3}}
+.spin3d{position:relative;aspect-ratio:16/10;max-height:70vh;width:100%;border-radius:18px;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,var(--surface),var(--bg));border:1px solid var(--line);cursor:grab;touch-action:pan-y}
+.spin3d:active{cursor:grabbing}
+.spin3d canvas{display:block;width:100%!important;height:100%!important}
+.spin-msg{position:absolute;left:14px;bottom:12px;z-index:2;font-family:var(--f-osd);font-size:18px;color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:3px 10px 2px;border-radius:6px;pointer-events:none}
+.spin3d:not(.ready) .spin-msg{left:50%;top:50%;bottom:auto;transform:translate(-50%,-50%)}
+.book{outline:none}
+.book-stage{position:relative;display:grid;grid-template-columns:1fr 1fr;aspect-ratio:1530/990;max-width:100%;perspective:2200px;background:#fff;border-radius:6px;box-shadow:0 26px 50px -24px rgba(0,0,0,.45);border:1px solid var(--line)}
+.book-stage .pg{width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;background:#f3f3f3}
+.book-stage .pg.L{border-radius:6px 0 0 6px}.book-stage .pg.R{border-radius:0 6px 6px 0}
+.spine{position:absolute;left:50%;top:0;bottom:0;width:40px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(0,0,0,.14) 48%,rgba(0,0,0,.2) 50%,rgba(0,0,0,.14) 52%,transparent);pointer-events:none;z-index:3}
+.leaf{position:absolute;top:0;bottom:0;width:50%;transform-style:preserve-3d;z-index:4}
+.leaf.right{left:50%;transform-origin:left center}.leaf.left{left:0;transform-origin:right center}
+.leaf img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#f3f3f3;box-shadow:0 0 30px rgba(0,0,0,.15)}
+.leaf .back{transform:rotateY(180deg)}
+.book-ui{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:14px}
+.bcount{font-size:20px;color:var(--muted);min-width:15ch;text-align:center}
+.rbtn:disabled{opacity:.35;cursor:default}
+.book:focus-visible .book-stage{outline:3px solid var(--cobalt);outline-offset:4px}
+/* flow */
+html{scroll-behavior:smooth}
+.rv-pre{transform:translateY(34px)}
+#work .card,.qa,.about>*,.signoff,.shead{transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+::view-transition-group(*){animation-duration:.45s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+dialog{overscroll-behavior:contain}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Maria Garcia</a>
+    <span class="lamp osd flick" id="lamp"><i></i><span>On air</span></span>
+    <nav aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#interview" class="hide-s">Interview</a>
+      <a href="https://drive.google.com/file/d/1d5VN3AH81Uglc1gXRl2GnsnhO7GW4ud5/view?usp=sharing" target="_blank" rel="noopener">Resume ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <div class="label" style="margin-bottom:18px">UX &amp; graphic designer · Now broadcasting from Tucson</div>
+      <h1>I design for the people on the <em>other side</em> of the screen.</h1>
+      <div class="meta"><span>Lead designer, University of Arizona</span><span>Web, research, print</span><span>English / Español</span></div>
+      <div class="ctas">
+        <a class="btn solid" href="#work">See the lineup</a>
+        <a class="btn" href="https://www.linkedin.com/in/maria-jose-garcia-bonilla" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+      </div>
+    </div>
+
+    <div class="tvwrap">
+      <div class="antenna" aria-hidden="true"><i></i></div>
+      <div class="tv" id="tv" role="button" tabindex="0" aria-label="Change channel" data-cursor="Change channel">
+        <div class="screen">
+          <div class="chan" id="chan"></div>
+          <div class="osd osd-ch" id="osdCh">CH 01</div>
+          <div class="osd osd-title" id="osdTitle"></div>
+          <canvas class="static" id="static" width="160" height="120"></canvas>
+        </div>
+        <div class="panel" aria-hidden="true"><div class="knob" id="knob1"></div><div class="knob" id="knob2"></div><div class="grille"></div></div>
+      </div>
+      <div class="legs" aria-hidden="true"><i></i><i></i></div>
+      <div class="remote">
+        <button class="rbtn" id="chDown" type="button" aria-label="Previous channel">−</button>
+        <button class="btn solid" id="watch" type="button">▶ Watch this project</button>
+        <button class="rbtn" id="chUp" type="button" aria-label="Next channel">+</button>
+      </div>
+      <div class="guide">Tap the TV to flip channels. Thirteen projects on air.</div>
+    </div>
+  </div>
+
+  <div class="ticker" aria-hidden="true"><div class="track" id="ticker"></div></div>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="shead">
+        <h2>The <em>lineup</em></h2>
+        <div class="filters" role="group" aria-label="Filter projects" id="filters"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div class="testcard" id="testcard" data-cursor="Power on">
+        <div class="inner">
+          <div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="tc-circle">Hola</div>
+          <div class="tc-low"><span class="osd">MG-TV</span><span class="osd">Tucson · AZ</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="label" style="margin-bottom:14px">About</div>
+        <p class="big">Part graphic designer, part UX designer, at home in the code. <em>Fully</em> on the user's side.</p>
+        <p>I'm the lead designer for Arizona Student Unions and Parking &amp; Transportation Services at the University of Arizona, and I've also designed for the Campus Store. I work where design meets technology: on any given day I'm wireframing in Figma, running a usability test, directing a food photoshoot, or writing CSS.</p>
+        <p>I start from what people need, gathered by my team and sometimes heard firsthand from students and campus partners. Then I test, refine, and test again. I've built templates and workflows that make my team faster, and I mentor a design student.</p>
+        <dl class="facts">
+          <div><dt>Education</dt><dd>M.S. Graphic Information Technology, UX/UI · ASU</dd></div>
+          <div><dt>Also</dt><dd>B.A. Studio Arts · University of Arizona</dd></div>
+          <div><dt>Toolkit</dt><dd>Figma, Adobe CC, After Effects, HTML/CSS</dd></div>
+          <div><dt>Platforms</dt><dd>Drupal (Quickstart), Shopify, Bootstrap</dd></div>
+          <div><dt>Accessibility</dt><dd>WCAG, Silktide, Siteimprove</dd></div>
+          <div><dt>Location</dt><dd>Tucson, AZ · open to relocating</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="interview">
+    <div class="wrap">
+      <div class="shead"><h2>The <em>interview</em></h2><p style="max-width:38ch;margin:0;color:var(--muted)">The questions hiring managers ask me most, answered before the call.</p></div>
+      <div class="transcript">
+        <div class="qa"><h3>Are you a UX designer or a graphic designer?</h3><p>Both, and it shows in the work. I've spent 5 years in graphic design and 2 in UX. I can run the research and testing on a website, then design the campaign, print pieces and photo shoots that go with it.</p></div>
+        <div class="qa"><h3>What project are you proudest of?</h3><p>The Student Unions website. It had years of unplanned pages and broken links, and people couldn't find things. I audited it, rebuilt the structure, tested it with users, and added a two-button banner that takes returning visitors straight to their task. The catering and Fast Copy teams say it's now much easier to guide people to their forms.</p></div>
+        <div class="qa"><h3>Do you only design, or do you build too?</h3><p>I build. I work in Quickstart, the university's Drupal framework, and write custom CSS for our Shopify catering stores. Moving catering orders from PDF forms to Shopify was a team initiative, and I helped design the stores, set them up and find the right apps.</p></div>
+        <div class="qa"><h3>How do you handle accessibility?</h3><p>It's part of the job from the start. I've run accessibility checks for about two years with Silktide and Siteimprove, and I remediated our sites to WCAG standards during the redesigns.</p></div>
+        <div class="qa"><h3>How do you work with stakeholders?</h3><p>It's a team system. My team gathers what stakeholders need and brings it to me, and sometimes I get to hear it firsthand. From there I show something early: Figma prototypes let everyone react to layout and flow before anything gets built.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap" id="contact">
+    <div class="signoff">
+      <div class="scan" aria-hidden="true"></div>
+      <div class="inner">
+        <div class="osd" style="opacity:.85;margin-bottom:16px">● Accepting new bookings</div>
+        <h2>Stay tuned. Or better, say hi.</h2>
+        <div class="row">
+          <div class="emailbox"><span id="email">maria.g9812@hotmail.com</span><button class="btn solid" id="copy" type="button">Copy email</button></div>
+          <a class="btn" href="http://www.linkedin.com/in/maria-jose-garcia-bonilla" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+    <footer><span>© 2026 Maria Garcia</span><span class="osd" style="font-size:18px">That's all for tonight. Off air.</span></footer>
+  </div>
+</main>
+
+<dialog id="case" aria-labelledby="caseTitle">
+  <div class="case-art" id="caseArt"></div>
+  <div class="case-body"><dl class="side" id="caseSide"></dl><div class="story" id="caseStory"></div></div>
+  <div class="rich" id="caseRich" hidden></div>
+  <div class="nextprev"><button class="btn" id="prevBtn" type="button">← Previous channel</button><button class="btn solid" id="nextBtn" type="button">Next channel →</button></div>
+</dialog>
+<div class="cur" id="cur" aria-hidden="true"></div>
+<dialog id="lb" aria-label="Enlarged image"><div class="lbbar"><span id="lbCap"></span><button type="button" id="lbClose" aria-label="Close image">×</button></div><img id="lbImg" alt=""></dialog>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+const OLD="https://mariagarciadesign.myportfolio.com/";
+const SD="";
+const shot=(f,cap,alt)=>`<button class="shot" type="button" data-lb="${SD+f}" data-cap="${cap||alt}" aria-label="Enlarge: ${alt}"><img src="${SD+f}" alt="${alt}" loading="lazy">${cap?`<span class="cap">${cap}</span>`:""}</button>`;
+const SAMMY_RICH=`
+<section>
+  <div class="rh"><h3>Before <em>&amp;</em> after</h3><p>The old space was a generic deli counter in the student union. I worked with architects and Facilities Management on the new restaurant, from finishes to signage. Drag to compare.</p></div>
+  <div class="ba" id="ba">
+    <img src="${SD}after.jpg" alt="Rendering of the new Sammy's Deli storefront in sage green with script signage">
+    <img class="before" src="${SD}before1.jpg" alt="The old deli counter before the redesign">
+    <span class="bal l">Before</span><span class="bal r">After</span>
+    <div class="line"><i>↔</i></div>
+    <input type="range" min="0" max="100" value="50" aria-label="Compare the old deli and the new Sammy's Deli">
+  </div>
+  <div class="thumbs">${shot("before1.jpg","Before","Old deli counter, front view")}${shot("before2.jpg","Before","Old deli counter, side view")}${shot("after.jpg","After","New Sammy's Deli storefront rendering")}</div>
+</section>
+
+<section>
+  <div class="rh"><h3>The <em>brand</em></h3><p>The client asked for an elevated New York deli that still works for students. The identity pairs a hand-lettered script with a muted sage palette. Tagline: "A New York Style Deli in the Desert."</p></div>
+  <div class="brandband"><img src="${SD}logo-white.png" alt="Sammy's Deli logo, white script wordmark"></div>
+  <div class="swatches">
+    <div class="sw"><b style="background:#7B9373"></b><div><strong>Muted Sage</strong><span>#7B9373 · Primary</span></div></div>
+    <div class="sw"><b style="background:#FFFFFF"></b><div><strong>White</strong><span>#FFFFFF · Primary</span></div></div>
+    <div class="sw"><b style="background:#836F3C"></b><div><strong>Muted Olive</strong><span>#836F3C · Accent</span></div></div>
+    <div class="sw"><b style="background:#1F2020"></b><div><strong>Dark Charcoal</strong><span>#1F2020 · Accent</span></div></div>
+  </div>
+  <dl class="typespec"><div><dt>Headlines</dt><dd>Good Karma, a brush script</dd></div><div><dt>Body &amp; menu copy</dt><dd>Avenir</dd></div></dl>
+  <div class="strip" aria-label="Brand guideline pages">
+    ${shot("g-cover.jpg","Cover","Brand guidelines cover")}${shot("g2.jpg","Primary logo","Primary logo page")}${shot("g3.jpg","Logo on dark","Logo on dark background page")}${shot("g6.jpg","Colors","Primary colors page")}${shot("g8.jpg","Typography","Typeface page")}${shot("g11.jpg","Graphics","Graphic elements page")}${shot("g13.jpg","Uniforms","Uniforms page")}
+  </div>
+  <p class="note">Full brand guidelines include logo usage, clear space, do's and don'ts, color, type, photography, graphic elements, uniforms and voice.</p>
+</section>
+
+<section>
+  <div class="rh"><h3>The <em>shoot</em></h3><p>The menu was revamped, so the food needed new photos to reintroduce the deli to students. Each graphic spotlights one sandwich.</p></div>
+  <div class="polas">${shot("post-club.jpg","","Sammy's Signature Club")}${shot("post-manhattan.jpg","","The Manhattan, meatball sub")}${shot("post-bronx.jpg","","The Bronx, Italian sub")}${shot("post-park.jpg","","The Park Avenue, chicken pesto panini")}${shot("post-bowl.jpg","","Spicy Chili Mac 'n Cheese Bread Bowl")}</div>
+  <div class="roles">
+    <div><b>Staged &amp; directed</b>I styled the food and art directed the shoot.</div>
+    <div><b>Processed</b>My photographer processed the images.</div>
+    <div><b>Finished</b>I finalized the edits in Photoshop and built the graphics in Illustrator.</div>
+  </div>
+</section>
+
+<section>
+  <div class="rh"><h3>The <em>launch</em></h3><p>"Leave No Crumbs!" ran across digital totems, social media, plasma screens and email, each piece pointing students to a specific menu item.</p></div>
+  <div class="camp">
+    <div class="totem">
+      <div class="body"><video src="${SD}totem.mp4" poster="${SD}totem-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Digital totem animation for the Sammy's Deli launch"></video></div>
+      <div class="pole"></div><div class="foot"></div>
+      <div class="lbl">Digital totem · motion</div>
+    </div>
+    <div class="phones">
+      <div class="ph">${shot("story-club.jpg","","Instagram story, Signature Club")}</div>
+      <div class="ph">${shot("story-park.jpg","","Instagram story, Park Avenue")}</div>
+      <div class="ph">${shot("story-bowl.jpg","","Instagram story, Bread Bowl")}</div>
+      <div class="lbl">Instagram stories</div>
+    </div>
+  </div>
+  <div class="feed" aria-label="Social feed posts">${shot("collage-b.jpg","Feed","Leave No Crumbs feed post, full menu")}${shot("collage-a.jpg","Feed","Leave No Crumbs collage, portrait")}${shot("post-manhattan.jpg","Feed","The Manhattan post")}${shot("post-club.jpg","Feed","Signature Club post")}${shot("post-park.jpg","Feed","Park Avenue post")}${shot("post-bowl.jpg","Feed","Bread Bowl post")}${shot("post-bronx.jpg","Feed","The Bronx post")}</div>
+</section>`;
+const MD="";
+/* ---- rich case-study builders ---- */
+const sec=(h,txt,body)=>`<section><div class="rh"><h3>${h}</h3><p>${txt}</p></div>${body}</section>`;
+const bar=url=>`<div class="bar"><i></i><i></i><i></i>${url?`<span>${url}</span>`:""}</div>`;
+const vid=(f,o={})=>{
+  const v=`<video src="${MD}${f}.mp4" poster="${MD}${f}-poster.jpg" muted loop playsinline preload="none" data-auto aria-label="${o.label||"Screen recording"}"></video>`;
+  if(o.frame==="browser")return `<figure class="fr fr-browser">${bar(o.url)}${v}<figcaption>${o.label}</figcaption></figure>`;
+  if(o.frame==="square")return `<figure class="fr fr-square">${v}<figcaption>${o.label}</figcaption></figure>`;
+  return `<figure class="fr fr-bare">${v}<figcaption>${o.label}</figcaption></figure>`;
+};
+const scroller=(f,o={})=>`<figure class="fr ${o.mail?"fr-mail":"fr-browser"}">${o.mail?`<div class="mailhd"><b>${o.from||"Arizona Dining"}</b><span>${o.subject||""}</span></div>`:bar(o.url)}<div class="scroll" tabindex="0" role="region" aria-label="${o.label}, scrollable"><img src="${MD}${f}" alt="${o.label}" loading="lazy"></div><figcaption>${o.label}</figcaption></figure>`;
+const flipper=(tabs)=>`<div class="flip"><div class="flip-tabs" role="tablist">${tabs.map((t,i)=>`<button type="button" role="tab" aria-selected="${i===0}" data-k="${i}">${t.label}</button>`).join("")}</div>
+  <div class="flip-stage" style="aspect-ratio:${tabs[0].ar}">${tabs.map((t,i)=>`<button type="button" class="flip-pg${i===0?" on":""}" data-lb="${MD}${t.src}" data-cap="${t.label}" aria-label="Enlarge ${t.label}"><img src="${MD}${t.src}" alt="${t.alt}" loading="lazy"></button>`).join("")}</div>
+  <p class="note">Click the image to see it full size.</p></div>`;
+const shot2=(f,cap,alt)=>`<button class="shot" type="button" data-lb="${MD}${f}" data-cap="${cap||alt}" aria-label="Enlarge: ${alt}"><img src="${MD}${f}" alt="${alt}" loading="lazy">${cap?`<span class="cap">${cap}</span>`:""}</button>`;
+const bigshot=(f,cap,alt)=>`<button class="shot bigshot" type="button" data-lb="${MD}${f}" data-cap="${cap}" aria-label="Enlarge: ${alt}"><img src="${MD}${f}" alt="${alt}" loading="lazy"></button>`;
+
+const SU_RICH=
+ sec(`The new <em>homepage</em>`,`Dining, meal plans, CatCa$h, catering and services, organized around what people come for. The page scrolls on its own; hover to pause or scroll it yourself.`,
+   scroller("su-home-1.jpg",{url:"union.arizona.edu",label:"Student Unions homepage, full page"}))+
+ sec(`Arizona Catering <em>&amp; Events</em>`,`The award-winning catering pages. A quick walk through the overview and menus, then the full page.`,
+   `<div class="duo">${vid("su-catering",{frame:"browser",url:"union.arizona.edu/catering",label:"Catering walkthrough"})}${scroller("su-cat-1.jpg",{url:"union.arizona.edu/catering",label:"Catering & Events overview, full page"})}</div>`);
+
+const PTS_RICH=
+ sec(`The new <em>homepage</em>`,`Built on the same system as the Student Unions site. The hero leads with two buttons for what most visitors need: My Account and Parking Maps.`,
+   scroller("pts-home-2.jpg",{url:"parking.arizona.edu",label:"Parking & Transportation homepage, full page"}));
+
+const SHOP_RICH=
+ sec(`Ordering, <em>live</em>`,`From choosing a restaurant to picking a delivery or pickup time, recorded on the live store.`,
+   `<div class="duo duo-wide">${vid("shop-desktop",{frame:"browser",url:"azexpresscatering.shop",label:"Desktop: browse a store, add a tray, check out"})}${vid("shop-square",{frame:"square",label:"Choosing a sandwich and options, step by step"})}</div>`)+
+ sec(`Designed in <em>Figma</em> first`,`I prototyped the storefront layouts before building them in Shopify, so stakeholders could react to the flow early.`,
+   `<div class="duo">${vid("shop-proto",{frame:"square",label:"Figma prototype of the storefront"})}<div class="callout"><p>Open the clickable prototype to try the flow yourself.</p><a class="btn solid" href="https://www.figma.com/proto/Zn3I7IbMycaGmGNnGKB0Uq/Shopify-proto?node-id=7-90&t=CwGHL8ZkokQ2vEKt-1" target="_blank" rel="noopener">Open Figma prototype ↗</a></div></div>`);
+
+const PARKS_RICH=
+ sec(`The final <em>design</em>`,`Home and a park page, side by side. Park Locator, Purchase Passes, My Passes and Plan Your Trip sit right on the home screen.`,
+   `<div class="stage">${bigshot("np-mock.jpg","National Parks app mockup","Two phones showing the National Parks home screen and the Bryce Canyon park page")}</div>`)+
+ sec(`The <em>prototype</em>`,`Home, park pages, digital passes and saved parks, recorded from the Figma prototype.`,
+   `<div class="duo duo-phone">${vid("parks",{frame:"bare",label:"Figma prototype walkthrough"})}<div class="callout"><p>Finding a park, buying a pass and keeping it offline take a few taps from the home screen.</p><a class="btn solid" href="https://www.figma.com/design/wIjTmq5xJMC3DFlItG491D/National-Parks-App-Reseeding--TWC544-?node-id=0-1&t=8GBNWjZbAUZtXbhK-1" target="_blank" rel="noopener">Open Figma file ↗</a></div></div>`)+
+ sec(`Screen <em>map</em>`,`Every screen in the flow: plan a trip, park pages for Bryce, Zion and Acadia, my passes, saved parks and purchasing.`,
+   bigshot("np-screens.jpg","National Parks screen map","Figma canvas showing all National Parks app screens"));
+
+const CHARRO_RICH=
+ sec(`The <em>prototype</em>`,`The redesigned site: a food-first homepage, an easier-to-scan menu, the restaurant's history and all three locations.`,
+   vid("elcharro",{frame:"browser",url:"elcharrocafe.com · prototype",label:"El Charro Café prototype walkthrough"}));
+
+const NL_RICH=
+ sec(`Recent <em>issues</em>`,`Each issue mixes events, specials and reminders for students on meal plans. Each one scrolls on its own; hover to pause.`,
+   `<div class="mails">${scroller("nl-sep-1.jpg",{mail:1,subject:"Eat. Drink. Do stuff.",label:"September issue"})}${scroller("nl-nov-1.jpg",{mail:1,subject:"November issue",label:"November issue"})}${scroller("nl-dec-1.jpg",{mail:1,subject:"December issue",label:"December issue"})}</div>`);
+
+const GUIDE_RICH=
+ sec(`In <em>print</em>`,`FUEL, printed: a food-forward cover with dining locations inside, each with real students and real plates.`,
+   `<div class="stage stage-warm">${bigshot("guide-mock.webp","FUEL dining guide mockup","Printed FUEL guide cover beside an open spread featuring '85 North")}</div>`)+
+ sec(`The <em>cover</em>`,`An extended cover that folds out to the back, with district maps that show where to eat near each group of dorms.`,
+   flipper([{label:"Outside · extended cover",src:"guide-1.jpg",alt:"Dining guide outside spread with the FUEL cover",ar:"2000/909"},{label:"Inside · district maps",src:"guide-2.jpg",alt:"Dining guide inside spread with Welcome to the Wildcat Family and district maps",ar:"2000/909"}]))+
+ sec(`Flip <em>through it</em>`,`Every inside spread: the campus maps, every dining location, awards, nutrition resources and meal plans. Click the right page to turn it, or use the arrows.`,
+   `<div class="book" tabindex="0" aria-label="Dining guide flipbook, use left and right arrow keys to turn pages"><div class="book-stage"><img class="pg L" alt=""><img class="pg R" alt=""><div class="leaf" hidden><img class="front" alt=""><img class="back" alt=""></div><span class="spine"></span></div>
+    <div class="book-ui"><button type="button" class="rbtn bprev" aria-label="Previous pages">←</button><span class="bcount osd"></span><button type="button" class="rbtn bnext" aria-label="Next pages">→</button></div></div>`);
+
+const EM_RICH=
+ sec(`The <em>series</em>`,`Each email is timed to the semester, from the first week to the holidays, and every one ends with a way to order online.`,
+   `<div class="mails mails-5">${scroller("em-start.jpg",{mail:1,from:"Express Catering",subject:"Start the semester strong",label:"Start of semester"})}${scroller("em-mid.jpg",{mail:1,from:"Express Catering",subject:"Mid-semester meetings",label:"Mid-semester"})}${scroller("em-end.jpg",{mail:1,from:"Express Catering",subject:"End of semester events",label:"End of semester"})}${scroller("em-holiday.jpg",{mail:1,from:"Express Catering",subject:"Make your next gathering effortless",label:"Holidays"})}${scroller("em-simple.jpg",{mail:1,from:"Express Catering",subject:"Express Catering made simple",label:"Launch"})}</div>`);
+
+const CATTRAN_RICH=
+ sec(`On the <em>road</em>`,`The finished wrap on a Cat Tran shuttle, running its route on campus.`,
+   bigshot("cattran-photo.jpg","Cat Tran shuttle","Wrapped Cat Tran shuttle parked on a palm-lined campus street, reading Cat Tran, Free On-Campus Transit"))+
+ sec(`Two <em>directions</em>`,`Wrap proposals for the Cat Tran shuttles, shown on every side of the vehicle: front, back, driver side and passenger side.`,
+   flipper([{label:"Proposal 1",src:"cattran-1.jpg",alt:"Cat Tran wrap proposal 1 in red and navy",ar:"1870/1445"},{label:"Proposal 2",src:"cattran-2.jpg",alt:"Cat Tran wrap proposal 2 with the block A",ar:"1870/1445"}]));
+
+const SWEETS_RICH=
+ sec(`The <em>brand</em>`,`A candy-shop identity built from bubbly letters, five sugary colors, swirl patterns and little treat icons.`,
+   bigshot("sw-brand-2.jpg","Logo, color, elements and patterns","Sweets brand sheet with logo, five colors, candy and cupcake elements, and swirl patterns"))+
+ sec(`In the <em>space</em>`,`The brand wrapped the shop in Bear Down Gym: wall graphics, display windows, the register, coolers and the yogurt cups themselves.`,
+   `<div class="thumbs t2">${shot2("sw-brand-3.jpg","Wall wraps","Installed Sweets wall wraps, display window and signage")}${shot2("sw-brand-4.jpg","Register, cooler & cup wraps","Register wrap, cooler wrap and yogurt cup wraps")}</div>`)+
+ sec(`Uniforms <em>&amp; loyalty</em>`,`Staff uniform options carrying the "You deserve a treat." line, and a punch card that brings students back.`,
+   `<div class="thumbs tees">${shot2("sw-tee-1c.jpg","Pink tee","Safety pink t-shirt option on a model and as flat mockups")}${shot2("sw-tee-2c.jpg","Blue tee","Light blue t-shirt option on a model and as flat mockups")}${shot2("sw-tee-3c.jpg","White polo","White polo option on a model and as flat mockups")}</div>
+    <div class="stage stage-swirl punch"><img class="floaty" src="${MD}sw-card.webp" alt="Sweets punch card front and back: buy 9 frozen treats, get the 10th free"></div>`);
+
+const CHAMP_RICH=
+ sec(`Five days, <em>five letters</em>`,`Each letter of CHAMP became a day of the event, with its own color, topic and free sample at NRICH Market, March 3–7.`,
+   flipper([{label:"Key art",src:"ch-keyart.jpg",alt:"Eat Like a CHAMP key art, March 3–7 at NRICH Market",ar:"1224/793"},{label:"Schedule",src:"ch-schedule.jpg",alt:"Five-day schedule: Carbohydrates, Hydration, Anti-inflammatory, Mental Focus, Protein",ar:"1224/792"}]))+
+ sec(`At the <em>event</em>`,`Table cards carried the schedule on one side and the key art on the other.`,
+   `<div class="duo">${shot2("ch-event.jpg","At NRICH Market","Eat Like a CHAMP table card on display at the event")}<div class="stage">${shot2("ch-cards-mock.jpg","Table cards","Front and back of the Eat Like a CHAMP table cards")}</div></div>`)+
+ sec(`Every <em>touchpoint</em>`,`A survey banner for each day's topic, and the campaign riding around campus on a food delivery robot.`,
+   `<div class="duo duo-robot"><div class="banners">${["c","h","m","p"].map(k=>shot2("ch-survey-"+k+".jpg","","CHAMP survey banner")).join("")}</div><div class="stage"><img class="floaty" src="${MD}ch-robot.webp" alt="Delivery robot wrapped with Eat Like a CHAMP graphics"></div></div>`);
+
+const VS_RICH=
+ sec(`On <em>campus</em>`,`The finished stand in use, with the Thirsty? front facing the walkway and students working nearby.`,
+   bigshot("vs-campus.jpg","On campus","Two students working at a shaded table in front of the wrapped vending stand with the Thirsty? front"))+
+ sec(`In <em>3D</em>`,`A model of the stand built from the real wrap files: the Thirsty? front, the Refresh side, the graphics on the back wall, and the machine fronts. It turns on its own; drag to look around.`,
+   `<div class="spin3d" id="spin3d"><span class="spin-msg">Loading the 3D stand…</span></div>`)+
+ sec(`Two <em>sides</em>`,`Mockups of one stand from two angles: the Thirsty? front with Coca-Cola bottles, and the Refresh side.`,
+   flipper([{label:"Front · Thirsty?",src:"vs-stand-thirsty.jpg",alt:"Front of the vending stand wrapped with the Thirsty? graphic and Coca-Cola bottles",ar:"1600/900"},{label:"Side · Refresh",src:"vs-stand-refresh.jpg",alt:"Side of the vending stand wrapped with the Refresh and Hydrate graphics",ar:"1600/1296"}]))+
+ sec(`The <em>artwork</em>`,`Full-length flats for each side of the stand. Click any one to see it full size.`,
+   `<div class="pans">${[["vs-flat-thirsty.jpg","Front: Thirsty?"],["vs-flat-refresh.jpg","Side: Refresh"],["vs-flat-wall.jpg","Back: Stop & Hydrate / Stay Cool"]].map(([f,c])=>`<button class="shot pan" type="button" data-lb="${MD}${f}" data-cap="${c}" aria-label="Enlarge: ${c}"><img src="${MD}${f}" alt="${c}" loading="lazy"><span class="cap">${c}</span></button>`).join("")}</div>`)+
+ sec(`The <em>system</em>`,`One pattern library of halftones, stripes, drips and dotted waves, reused for panels that feature Coca-Cola's drinks.`,
+   `<div class="thumbs vs3">${shot2("vs-pattern.jpg","Pattern","Red-to-navy pattern with stripes, halftone dots and teal splatter")}${shot2("vs-coke.jpg","Coca-Cola panel","Coca-Cola bottle panel on the pattern")}${shot2("vs-water.jpg","Water panel","vitaminwater and smartwater panel with an AH! speech bubble")}</div>`);
+
+const BKS_RICH=
+ sec(`On the <em>street</em>`,`Installed at the Campus Store. Illustrated scenes of campus life, desert plants and wildlife wrap the glass, from full murals to a low border that leaves the window displays visible.`,
+   `<div class="duo">${shot2("bks-photo-front.jpg","Bear Down window","Installed window mural with Wilbur and Wilma Wildcat, a cheerleader and students")}${shot2("bks-photo-back.jpg","Display window border","Window border of desert hills, cacti and wildlife under a merchandise display")}</div>`)+
+ sec(`Every <em>pane</em>`,`Each window was illustrated pane by pane to fit the storefront's frames, then mocked up on photos of the building before printing.`,
+   flipper([{label:"Bookstore entrance",src:"bks-back-1.jpg",alt:"Bookstore entrance window mockups and illustrated flats",ar:"2210/1430"},{label:"Entrance doors",src:"bks-back-2.jpg",alt:"Entrance door window mockups and flats",ar:"2210/1430"},{label:"More than a store",src:"bks-front-1.jpg",alt:"More than a store, Más que una tienda window mockups and flats",ar:"2210/1430"},{label:"Bear Down windows",src:"bks-front-2.jpg",alt:"Bear Down storefront window mockups and flats",ar:"2210/1430"}]));
+
+const P=[
+ {id:"sammys-deli",feat:true,wide:true,isNew:true,cat:"brand",title:"Sammy's Deli",sub:"Restaurant, brand & launch campaign",year:"2026",cover:{t:"photo",src:SD+"after.jpg",logo:SD+"logo-white.png"},
+  role:"Lead designer",team:"Architects, Facilities Management, BAAS Marketing, photographer",tools:"Illustrator, Photoshop, photo direction, motion",
+  lead:"An outdated campus deli became Sammy's, a New York style deli in the desert. I helped shape the space, built the brand, directed the food shoot and launched it to students.",
+  problem:"The old deli had no identity of its own. The client wanted an elevated New York deli that still meets students' needs, with a revamped menu that students needed a reason to try.",
+  steps:["Worked with architects and Facilities Management to design the new restaurant.","Created the brand: logo, palette, typography, graphic elements and brand guidelines.","Staged and art directed a new food shoot for the revamped menu. My photographer processed the images and I finalized edits in Photoshop.","Designed the launch graphics in Illustrator, each one featuring a specific menu item.","Rolled the campaign out across digital totems, social media, plasma screens and email."],
+  result:"A new restaurant, a full brand system and a launch campaign that reintroduced the deli to students. The guidelines keep signage, uniforms and future campaigns consistent. Sammy's also has its own catering storefront on the team's Shopify ordering system.",
+  rich:SAMMY_RICH,
+  links:[["Sammy's catering store","https://azexpresscatering.shop/pages/sammys-deli"]]},
+ {id:"student-unions",feat:true,cat:"ux",title:"Student Unions Website",sub:"Redesign · University of Arizona",year:"2025",award:"Bronze award",cover:{t:"browser",src:MD+"su-home-1.jpg",bg:"var(--cobalt)"},
+  role:"Lead designer",team:"Asst. Director of Marketing, Brand Manager, Web Services",tools:"Figma, Quickstart (Drupal), Bootstrap, Silktide",
+  lead:"union.arizona.edu is where students, parents, faculty and staff go for dining, meal plans, catering and more. Years of uncoordinated edits had buried all of it.",
+  problem:"Many editors had added pages for years without a shared plan. The result was old pages, broken links and crowded layouts, and users told us they couldn't find what they needed. Most returning visitors came back for one task, like logging in to the meal plan portal or ordering from Fast Copy.",
+  steps:["Audited the site and mapped what existed, what was broken and what people came for.","Rebuilt the information architecture and wireframed key templates.","Remediated accessibility issues to WCAG standards.","Ran usability testing with 5 participants and refined the design.","Added Figma prototypes for the next round, so stakeholders could review layout and flow before development.","Designed a top banner with two buttons that take returning users straight to their main task, while keeping every existing page and link."],
+  result:"The Events & Catering and Fast Copy teams say it is much easier to guide people to their forms, and students no longer struggle to reach the meal plan portal. The Arizona Catering pages won a Bronze Collegiate Advertising Award for Website Design.",
+  rich:SU_RICH,
+  links:[["Visit the live site","https://union.arizona.edu/"],["View Figma prototype","https://www.figma.com/design/ZoCLyyU2HwrmlKy69SFjpL/SU_Fast-Copy-Redesign?node-id=0-1&t=QxtJX9cBJDg85DOF-1"]]},
+ {id:"express-catering-shop",feat:true,cat:"ux",title:"Express Catering Ordering",sub:"Shopify system · Campus catering",year:"2026",cover:{t:"bvideo",src:MD+"shop-cover",bg:"#7B9373"},
+  role:"UX designer · design, setup, apps",team:"Express Catering and campus restaurant partners",tools:"Figma, Shopify, custom CSS, Shopify apps",
+  lead:"Campus catering orders ran on PDF forms and a legacy process. Moving to Shopify was a team initiative; I helped design the storefronts, set them up and explore apps.",
+  problem:"Customers had to find the right PDF, fill it out and send it in, and restaurants received orders as forms. Nothing about it felt like ordering online.",
+  steps:["Worked with the team on the move from PDF forms to Shopify.","Designed storefront layouts and the ordering flow in Figma.","Researched and set up apps to get the usability stakeholders needed.","Wrote custom CSS so each store and product display matches what each restaurant asked for."],
+  result:"Customers now browse the campus catering shops, pick one and check out online. Restaurants receive orders through the store instead of forms. Two of eight storefronts are live, with the rest rolling out.",
+  rich:SHOP_RICH,
+  links:[["Visit Sammy's Deli store","https://azexpresscatering.shop/pages/sammys-deli"],["Figma prototype","https://www.figma.com/proto/Zn3I7IbMycaGmGNnGKB0Uq/Shopify-proto?node-id=7-90&t=CwGHL8ZkokQ2vEKt-1"]]},
+ {id:"parking-transportation",feat:true,cat:"ux",title:"Parking & Transportation Website",sub:"Redesign · Parking & Transportation Services",year:"2025–26",cover:{t:"browser",src:MD+"pts-home-2.jpg",bg:"#AB0520"},
+  role:"Lead designer",team:"Parking & Transportation Services, Web Services",tools:"Figma, Quickstart (Drupal), Bootstrap",
+  lead:"After the Student Unions redesign, I brought the same system and process to the Parking & Transportation Services website.",
+  problem:"Parking and transit information is something people need quickly, often on the way to campus. The site had to get them to their account, maps and transit options without digging.",
+  steps:["Audited the existing site and its content.","Restructured the information architecture.","Wireframed and prototyped in Figma for stakeholder review.","Remediated accessibility issues to WCAG standards.","Built it on Quickstart and the university's Bootstrap framework."],
+  result:"A homepage that leads with My Account and Parking Maps, with alternative transportation, permits and maps a click away.",
+  rich:PTS_RICH,
+  links:[["Visit the live site","https://parking.arizona.edu/"]]},
+ {id:"national-parks",feat:true,cat:"ux",title:"National Parks App",sub:"Redesign & prototype",year:"Case study",cover:{t:"float",src:MD+"np-mock.jpg",bg:"#FFFFFF",fit:"cover"},
+  role:"Solo UX designer",team:"Graduate course project (ASU)",tools:"Figma, paper wireframes",
+  lead:"I reviewed the existing national parks app, found where people got stuck, and redesigned it around those pain points.",
+  problem:"Visitors struggled with navigation and with planning a trip inside the app, and the app was less useful once they lost signal in the park.",
+  steps:["Surveyed 6 people about the current app with a Google Form.","Did guerrilla research at Saguaro National Park.","Sketched on paper, then wireframed in Figma.","Ran a five-second test with 5 participants and task-based usability tests."],
+  result:"The final design simplifies navigation and adds digital passes, offline downloads, a Plan Trip itinerary builder and Saved Parks.",
+  rich:PARKS_RICH,
+  links:[["Open Figma file","https://www.figma.com/design/wIjTmq5xJMC3DFlItG491D/National-Parks-App-Reseeding--TWC544-?node-id=0-1&t=8GBNWjZbAUZtXbhK-1"]]},
+ {id:"sweets",cat:"brand",title:"Sweets Froyo + Candy",sub:"Branding & store design",year:"2026",cover:{t:"float",src:MD+"sw-card.webp",bg:"#FDF3E3",pat:MD+"sw-swirl.jpg"},
+  role:"Designer",team:"Arizona Student Unions",tools:"Illustrator, Photoshop, print production",
+  lead:"Sweets is a frozen yogurt and candy shop in Bear Down Gym. I created the brand and carried it through the whole space and the staff uniforms.",
+  problem:"A new shop needed a personality students would notice from across the building, and a brand flexible enough to cover walls, counters, cups and clothing.",
+  steps:["Designed the logo, color palette, candy and cupcake elements, and swirl patterns.","Applied the brand to wall wraps, display windows, signage, the register and coolers.","Designed yogurt cup wraps and a loyalty punch card.","Created staff uniform options: two t-shirts and a polo."],
+  result:"A complete, cheerful brand system that runs from the walls to the cups and the team's uniforms.",
+  rich:SWEETS_RICH,
+  links:[]},
+ {id:"champ",cat:"campaign",title:"Eat Like a CHAMP",sub:"Nutrition event campaign · Arizona Dining",year:"2026",cover:{t:"float",src:MD+"ch-cards-mock.jpg",bg:"#FFFFFF",fit:"cover"},
+  role:"Designer",team:"Arizona Dining",tools:"Illustrator, Photoshop",
+  lead:"A five-day nutrition campaign for Arizona Dining. Each letter of CHAMP, Food Choices for Winning Performance, became a day with its own topic and samples.",
+  problem:"Nutrition tips are easy to ignore. The campaign had to make five topics feel like one fun, collectible event.",
+  steps:["Designed the Eat Like a CHAMP key art with playful sticker characters.","Gave each letter its own color and badge: Carbohydrates, Hydration, Anti-inflammatory, Mental Focus and Protein.","Designed double-sided table cards with the schedule and key art.","Created a survey banner for each day's topic.","Applied the campaign to a campus food delivery robot."],
+  result:"A recognizable campaign that ran March 3–7 at NRICH Market, across table cards, surveys and delivery robots.",
+  rich:CHAMP_RICH,
+  links:[]},
+ {id:"el-charro",cat:"ux",title:"El Charro Café",sub:"User research & web redesign",year:"2024",cover:{t:"browser",src:MD+"elcharro-home.jpg",bg:"#C8323B"},
+  role:"UX designer",team:"Independent project",tools:"Figma, sketching",
+  lead:"A redesign of a popular Tucson restaurant's website, built around accessibility and the people who actually use it.",
+  problem:"The existing site made common tasks harder than they needed to be and had accessibility gaps.",
+  steps:["Ran a heuristic evaluation of the existing site.","Conducted user research and built personas.","Sketched layouts and flows.","Designed a high-fidelity prototype."],
+  result:"An inclusive, user-centered redesign with clearer paths to the menu, history and locations.",
+  rich:CHARRO_RICH,
+  links:[]},
+ {id:"dining-newsletter",cat:"campaign",title:"Arizona Dining Newsletter",sub:"Email series · Meal plan holders",year:"2023–now",award:"Gold award",medal:"g",cover:{t:"fan",srcs:[MD+"nl-nov-1.jpg",MD+"nl-sep-1.jpg",MD+"nl-dec-1.jpg"],bg:"var(--tint)"},
+  role:"Lead designer since 2023",team:"Arizona Student Unions Marketing",tools:"Email design, Photoshop, Illustrator",
+  lead:"An email series for students on meal plans covering events, dining specials, limited-time offers, campus dining updates and reminders.",
+  problem:"The audience is mostly freshmen and sophomores, and a newsletter only works if they keep opening it.",
+  steps:["Took over design of the series in 2023.","Redesigned and evolved the format to keep students engaged.","Directed the food photography used across issues."],
+  result:"The series won Gold in the Collegiate Advertising Awards, Newsletter Series category.",
+  rich:NL_RICH,
+  links:[]},
+ {id:"dining-guide",cat:"campaign",title:"Arizona Dining Guide",sub:"Print & digital guide",year:"2025",award:"Silver award",medal:"s",cover:{t:"float",src:MD+"guide-mock.webp",bg:"#F3E3CF"},
+  role:"Designer",team:"Arizona Student Unions Marketing",tools:"InDesign, Photoshop, Illustrator",
+  lead:"FUEL, the Arizona Dining & Nutrition Guide, helps new students and parents get to know campus dining and meal plans.",
+  problem:"Meal plans and campus dining options are a lot to take in for a new student and their family.",
+  steps:["Organized dining and meal plan information into a guide families could scan.","Mapped dining options by campus district, next to the dorms in each one.","Designed it for both print and digital."],
+  result:"Won Silver in the Collegiate Advertising Awards, Brochure (Multiple Pages), schools with 20,000+ students.",
+  rich:GUIDE_RICH,
+  links:[]},
+ {id:"catering-email",cat:"campaign",title:"Express Catering Emails",sub:"Campaign · Faculty & staff",year:"2026",cover:{t:"fan",srcs:[MD+"em-holiday.jpg",MD+"em-start.jpg",MD+"em-mid.jpg"],bg:"#7B9373"},
+  role:"Designer",team:"Arizona Catering",tools:"Email design, Photoshop",
+  lead:"A newsletter series that tells University of Arizona faculty and staff they can order catering online from campus.",
+  problem:"Faculty and staff didn't know they could order from campus restaurant kitchens and franchises online.",
+  steps:["Designed a newsletter series for an internal audience.","Featured campus restaurant kitchens and franchise caterers.","Gave each send its own color and headline, tied to that point in the semester."],
+  result:"A recurring campaign that sends people straight to the new Shopify ordering system.",
+  rich:EM_RICH,
+  links:[]},
+ {id:"cat-tran",cat:"brand",title:"Cat Tran Bus Wraps",sub:"Wrap proposals · Campus shuttle",year:"2024",cover:{t:"photo",src:MD+"cattran-photo.jpg"},
+  role:"Designer",team:"Parking & Transportation Services",tools:"Illustrator, print production",lead:"Vinyl wrap designs for the Cat Tran, the university's free on-campus shuttle.",
+  rich:CATTRAN_RICH,
+  links:[]},
+ {id:"window-graphics",cat:"brand",title:"Campus Store Windows",sub:"Illustrated window graphics · print vinyl",year:"2025",cover:{t:"photo",src:MD+"bks-photo-front.jpg"},
+  role:"Designer & illustrator",team:"Campus Store",tools:"Illustrator, print production",
+  lead:"Illustrated window graphics for the University of Arizona Campus Store: campus life, Wilbur and Wilma Wildcat, and the Sonoran desert, wrapped across the storefront.",
+  problem:"The storefront had a lot of glass and many frame sizes. The graphics needed to feel like one story while fitting every pane, and some windows still had to show the merchandise inside.",
+  steps:["Illustrated scenes of students, campus landmarks, mascots, desert plants and wildlife.","Split the artwork pane by pane to match each window and door frame.","Designed full murals for some windows and a low desert border for the display windows.","Added a bilingual message: More than a store / Más que una tienda.","Mocked everything up on photos of the building, then prepared the files for print."],
+  result:"A storefront that reads as one illustrated campus scene from the sidewalk, while the display windows still show off the merchandise.",
+  rich:BKS_RICH,
+  links:[]},
+ {id:"vending-stand",tag:"3D",cat:"brand",title:"Vending Stand Wraps",sub:"Large-format vinyl · Coca-Cola hydration stand",year:"2023",cover:{t:"photo",src:MD+"vs-stand-thirsty.jpg"},
+  role:"Designer",team:"Arizona Student Unions, with Coca-Cola as client",tools:"Illustrator, Photoshop, print production",
+  lead:"A wrapped outdoor vending stand on campus. The space was first planned as a fast food stand, but in Arizona keeping students hydrated comes first, so we made it a vending stand instead.",
+  problem:"The stand had to grab attention outdoors and wrap around the vending machines. Coca-Cola was also a client and wanted their products on display.",
+  steps:["Built a pattern library from halftones, stripes, paint drips and dotted waves in a red-to-navy palette.","Designed the front with the hand-lettered headline Thirsty? and Coca-Cola bottles.","Designed the Refresh side with Hydrate messaging.","Designed the back with Stop & Hydrate and Stay Cool graphics.","Created panels featuring Coca-Cola products, including vitaminwater and smartwater.","Prepared the large-format files for print and placed them on site photos as mockups."],
+  result:"One stand with a bold look on every side, a simple message for students (stop, hydrate, refresh) and Coca-Cola's products front and center.",
+  rich:VS_RICH,
+  links:[]}
+];
+const CATS=[["all","All channels"],["ux","UX & Web"],["campaign","Campaigns"],["brand","Brand & Print"]];
+const ch=i=>"CH "+String(i+1).padStart(2,"0");
+
+function art(p){
+  const m=p.medal?`<div class="medalbig ${p.medal}">${p.medal==="g"?"GOLD":"SILVER"}</div>`:"";
+  const c=p.cover;
+  if(c){
+    if(c.t==="photo")return `<div class="a cover"><img src="${c.src}" alt="" loading="lazy">${c.logo?`<img class="logo" src="${c.logo}" alt="">`:""}</div>`;
+    if(c.t==="browser")return `<div class="a bcover" style="background:${c.bg}">${m}<div class="bwin"><div class="bar"><i></i><i></i><i></i></div><img src="${c.src}" alt="" loading="lazy"></div></div>`;
+    if(c.t==="bvideo")return `<div class="a bcover" style="background:${c.bg}">${m}<div class="bwin"><div class="bar"><i></i><i></i><i></i></div><video src="${c.src}.mp4" poster="${c.src}-poster.jpg" muted loop playsinline preload="none" data-auto aria-hidden="true"></video></div></div>`;
+    if(c.t==="contain")return `<div class="a ccover" style="background:${c.bg}">${m}<img src="${c.src}" alt="" loading="lazy"></div>`;
+    if(c.t==="float")return `<div class="a mcover${c.fit?" fit":""}" style="background:${c.bg}${c.pat?`;background-image:url(${c.pat});background-size:cover;background-position:center`:""}">${m}<img src="${c.src}" alt="" loading="lazy"></div>`;
+    if(c.t==="fan")return `<div class="a fcover" style="background:${c.bg}">${m}${c.srcs.map(s=>`<img src="${s}" alt="" loading="lazy">`).join("")}</div>`;
+  }
+  switch(p.art){
+   case "swirl":return `<div class="a ${p.bg}"><div class="cone"></div><div class="swirl"></div></div>`;
+   case "burst":return `<div class="a ${p.bg}"><div class="burst"></div><div class="wordmark">Champ</div></div>`;
+   case "store":return `<div class="a ${p.bg}"><div class="store"><div class="pane"></div><div class="pane">UA</div><div class="pane"></div></div></div>`;
+   case "stand":return `<div class="a ${p.bg}"><div class="stand"><div class="wave"></div><div class="door"></div></div></div>`;
+  }
+  return `<div class="a bg-ink"></div>`;
+}
+
+/* grid + filters */
+const grid=document.getElementById("grid"),filters=document.getElementById("filters");
+grid.innerHTML=P.map((p,i)=>`<button class="card${p.feat?" feat":""}${p.wide?" wide":""}" data-cat="${p.cat}" data-i="${i}" type="button" data-cursor="View project" aria-label="Open ${p.title}">
+  <div class="art">${art(p)}<span class="chtag">${ch(i)}</span>${p.isNew?`<span class="newtag">New</span>`:""}${p.tag?`<span class="newtag">${p.tag}</span>`:""}</div>
+  <div class="card-meta"><div><h3>${p.title}</h3><div class="sub">${p.sub}</div></div><span class="yr">${p.award?`<b>${p.award}</b>`:""}${p.year}</span></div>
+</button>`).join("");
+filters.innerHTML=CATS.map(([k,l],i)=>`<button class="chip" type="button" data-f="${k}" aria-pressed="${i===0}">${l}</button>`).join("");
+filters.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;
+  filters.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed",c===b));
+  const go=()=>grid.querySelectorAll(".card").forEach(c=>{const p=P[c.dataset.i];c.hidden=!(b.dataset.f==="all"||p.cat===b.dataset.f);c.classList.toggle("feat",b.dataset.f==="all"&&!!p.feat);c.classList.toggle("wide",b.dataset.f==="all"&&!!p.wide)});
+  if(document.startViewTransition&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.startViewTransition(go);else go();});
+grid.addEventListener("click",e=>{const c=e.target.closest(".card");if(c)openCase(+c.dataset.i,true,c.querySelector(".art"))});
+document.querySelector(".guide").textContent=`Tap the TV to flip channels. ${P.length} projects on air.`;
+
+/* ticker */
+const tItems=P.map((p,i)=>`<span><b>${ch(i)}</b>${p.title}</span>`).join("");
+document.getElementById("ticker").innerHTML=tItems+tItems;
+
+/* TV */
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const chan=document.getElementById("chan"),osdCh=document.getElementById("osdCh"),osdTitle=document.getElementById("osdTitle");
+const cv=document.getElementById("static"),cx=cv.getContext("2d");const img=cx.createImageData(160,120);
+let tvI=0,rot=0,auto=null,hovering=false;
+function drawStatic(){const d=img.data;for(let i=0;i<d.length;i+=4){const v=Math.random()*255|0;d[i]=d[i+1]=d[i+2]=v;d[i+3]=255}cx.putImageData(img,0,0)}
+function tune(i,fx=true){
+  tvI=(i+P.length)%P.length;const p=P[tvI];
+  const swap=()=>{chan.innerHTML=art(p);osdCh.textContent=ch(tvI);osdTitle.textContent=p.title;try{wireVideos(chan)}catch(e){}};
+  rot+=60;document.getElementById("knob1").style.transform=`rotate(${rot}deg)`;
+  if(!fx||reduce){swap();return}
+  cv.classList.add("on");let n=0;const loop=()=>{drawStatic();if(++n<9)requestAnimationFrame(loop);else cv.classList.remove("on")};loop();
+  setTimeout(swap,110);
+}
+tune(0,false);
+const tv=document.getElementById("tv");
+tv.addEventListener("click",()=>tune(tvI+1));
+tv.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();tune(tvI+1)}});
+tv.addEventListener("pointerenter",e=>{hovering=true;if(e.pointerType==="mouse")tune(tvI+1)});
+tv.addEventListener("pointerleave",()=>hovering=false);
+document.getElementById("chUp").onclick=()=>tune(tvI+1);
+document.getElementById("chDown").onclick=()=>tune(tvI-1);
+document.getElementById("watch").onclick=()=>openCase(tvI,true,document.querySelector(".screen"));
+if(!reduce){auto=setInterval(()=>{if(!hovering&&!document.hidden&&!dlg.open)tune(tvI+1)},3800)}
+
+/* lamp re-flicker on scroll + test card power on */
+const lamp=document.getElementById("lamp");let lastF=0;
+addEventListener("scroll",()=>{const now=Date.now();if(now-lastF>6000&&scrollY>400){lastF=now;lamp.classList.remove("flick");void lamp.offsetWidth;lamp.classList.add("flick")}},{passive:true});
+const tc=document.getElementById("testcard");
+const power=()=>{tc.classList.remove("power");void tc.offsetWidth;tc.classList.add("power")};
+if("IntersectionObserver" in window){new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)power()}),{threshold:.5}).observe(tc)}
+tc.addEventListener("click",power);
+
+/* custom cursor */
+const cur=document.getElementById("cur");
+if(matchMedia("(hover:hover) and (pointer:fine)").matches){
+  addEventListener("pointermove",e=>{cur.style.left=e.clientX+"px";cur.style.top=e.clientY+"px";const t=e.target.closest("[data-cursor]");if(t){cur.textContent=t.dataset.cursor;cur.classList.add("show")}else cur.classList.remove("show")});
+  document.addEventListener("pointerleave",()=>cur.classList.remove("show"));
+}
+
+/* ---- motion helpers ---- */
+const IO="IntersectionObserver" in window;
+// videos play only while on screen
+const vidIO=IO?new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting&&!reduce){v.play().catch(()=>{})}else v.pause()}),{threshold:.35}):null;
+function wireVideos(root){root.querySelectorAll("video[data-auto]").forEach(v=>{if(vidIO)vidIO.observe(v);else if(!reduce)v.play().catch(()=>{})})}
+wireVideos(document);
+// self-scrolling page/email frames
+const live=new Set();
+const scIO=IO?new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting?live.add(e.target):live.delete(e.target)),{threshold:.3}):null;
+function wireScrollers(root){root.querySelectorAll(".scroll").forEach(s=>{
+  s._pause=0;s._pos=0;
+  const hold=()=>{s._pause=performance.now()+2600};
+  s.addEventListener("pointerenter",()=>s._hover=true);s.addEventListener("pointerleave",()=>{s._hover=false;hold()});
+  s.addEventListener("wheel",hold,{passive:true});s.addEventListener("touchstart",hold,{passive:true});s.addEventListener("focus",()=>s._hover=true);s.addEventListener("blur",()=>s._hover=false);
+  if(scIO)scIO.observe(s);
+})}
+let lastT=performance.now();
+function tick(t){const dt=Math.min(64,t-lastT);lastT=t;
+  live.forEach(s=>{if(s._hover||t<s._pause)return;const max=s.scrollHeight-s.clientHeight;if(max<=0)return;
+    if(Math.abs(s.scrollTop-s._pos)>2)s._pos=s.scrollTop;
+    if(s._pos>=max-1){s._pause=t+1800;s._pos=0;s.scrollTo({top:0,behavior:"smooth"});return}
+    s._pos=Math.min(max,s._pos+dt*0.05);s.scrollTop=s._pos});
+  requestAnimationFrame(tick)}
+if(!reduce)requestAnimationFrame(tick);
+// tabbed spreads
+function wireFlips(root){root.querySelectorAll(".flip").forEach(f=>{f.querySelectorAll(".flip-tabs button").forEach(b=>b.addEventListener("click",()=>{
+  f.querySelectorAll(".flip-tabs button").forEach(x=>x.setAttribute("aria-selected",x===b));
+  f.querySelectorAll(".flip-pg").forEach((p,i)=>p.classList.toggle("on",i==b.dataset.k))}))})}
+// gentle rise as things scroll in (always visible, only position animates)
+const rvIO=IO&&!reduce?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove("rv-pre");rvIO.unobserve(e.target)}}),{threshold:.08}):null;
+function wireReveal(els){if(!rvIO)return;els.forEach((el,i)=>{if(el.getBoundingClientRect().top>innerHeight*0.95){el.style.transitionDelay=(i%3)*70+"ms";el.classList.add("rv-pre");rvIO.observe(el)}})}
+wireReveal([...document.querySelectorAll("#work .card,#process .shead,.qa,.about>*,.signoff,#work .shead,#interview .shead")]);
+
+/* case dialog */
+/* ---- 3D vending stand ---- */
+let spin=null;
+function loadScript(src){return new Promise((res,rej)=>{if(document.querySelector(`script[src="${src}"]`)){const t=setInterval(()=>{if(window.THREE&&(!src.includes("Orbit")||THREE.OrbitControls)){clearInterval(t);res()}},50);return}const s=document.createElement("script");s.src=src;s.onload=res;s.onerror=rej;document.head.appendChild(s)})}
+function stopSpin(){if(!spin)return;cancelAnimationFrame(spin.raf);spin.io&&spin.io.disconnect();spin.ro&&spin.ro.disconnect();spin.renderer.dispose();spin=null}
+async function init3d(el){
+  stopSpin();
+  try{await loadScript("https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js");await loadScript("https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js")}
+  catch(e){el.querySelector(".spin-msg").textContent="The 3D view couldn't load. The photos below show the stand.";return}
+  if(!el.isConnected)return;
+  const T=THREE,W=()=>el.clientWidth,H=()=>el.clientHeight;
+  const renderer=new T.WebGLRenderer({antialias:true,alpha:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(W(),H());
+  renderer.outputEncoding=T.sRGBEncoding;renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;
+  el.appendChild(renderer.domElement);el.classList.add("ready");
+  const scene=new T.Scene();
+  const cam=new T.PerspectiveCamera(32,W()/H(),.1,100);cam.position.set(6.5,3.4,8.2);
+  const ctl=new T.OrbitControls(cam,renderer.domElement);ctl.target.set(0,1.25,0);ctl.enableDamping=true;ctl.enablePan=false;ctl.minDistance=6;ctl.maxDistance=15;ctl.maxPolarAngle=Math.PI*.49;ctl.autoRotate=!reduce;ctl.autoRotateSpeed=2.4;
+  scene.add(new T.HemisphereLight(0xffffff,0x8a8fa8,.75));
+  const sun=new T.DirectionalLight(0xffffff,.85);sun.position.set(5,9,6);sun.castShadow=true;sun.shadow.mapSize.set(1024,1024);Object.assign(sun.shadow.camera,{left:-6,right:6,top:6,bottom:-6});scene.add(sun);
+  const L=new T.TextureLoader();
+  const tex=f=>{const t=L.load(MD+f);t.encoding=T.sRGBEncoding;t.anisotropy=8;return t};
+  const mat=o=>new T.MeshStandardMaterial(Object.assign({roughness:.8,metalness:0},o));
+  const navy=mat({color:0x1d2148}),blue=mat({color:0x2b4fae,roughness:.5,metalness:.2}),top=mat({color:0x4f7fa3,roughness:.4,metalness:.1});
+  const box=(w,h,d,m,x,y,z)=>{const g=new T.Mesh(new T.BoxGeometry(w,h,d),m);g.position.set(x,y,z);g.castShadow=g.receiveShadow=true;scene.add(g);return g};
+  const art=f=>mat({map:tex(f),roughness:.55});
+  // counters (wraps)
+  const ch=1.1,cw=6,cd=3;
+  box(cw,ch,.12,[navy,navy,navy,navy,art("vs-flat-thirsty.jpg"),navy],0,ch/2,cd/2);
+  box(.12,ch,cd,[navy,art("vs-flat-refresh.jpg"),navy,navy,navy,navy],-cw/2,ch/2,0);
+  box(.12,ch,cd,[art("vs-pattern.jpg"),navy,navy,navy,navy,navy],cw/2,ch/2,0);
+  box(cw+.3,.08,.5,top,0,ch+.04,cd/2);box(.5,.08,cd,top,-cw/2,ch+.04,0);box(.5,.08,cd,top,cw/2,ch+.04,0);
+  // back wall + machines
+  box(cw,2.5,.14,[navy,navy,navy,navy,art("vs-pattern.jpg"),art("vs-flat-wall.jpg")],0,1.25,-cd/2);
+  const mm=["coke","dasani","powerade","monster"],mw=1.15;
+  mm.forEach((k,i)=>box(mw,2.05,.8,[navy,navy,navy,navy,art("vm-"+k+".jpg"),navy],(i-1.5)*(mw+.12),1.025,-cd/2+.5));
+  // roof + posts
+  const rc=document.createElement("canvas");rc.width=256;rc.height=16;const rx=rc.getContext("2d");for(let i=0;i<256;i+=16){rx.fillStyle=i%32?"#7b7f88":"#9aa0aa";rx.fillRect(i,0,16,16)}
+  const rt=new T.CanvasTexture(rc);rt.wrapS=T.RepeatWrapping;rt.repeat.set(3,1);
+  box(cw+.8,.08,cd+.8,mat({map:rt,metalness:.5,roughness:.45}),0,2.95,0);
+  [[-1,-1],[1,-1],[-1,1],[1,1]].forEach(([a,b])=>{const p=new T.Mesh(new T.CylinderGeometry(.07,.07,2.95,16),blue);p.position.set(a*(cw/2+.15),1.475,b*(cd/2+.15));p.castShadow=true;scene.add(p)});
+  // ground
+  const gnd=new T.Mesh(new T.CircleGeometry(7,64),new T.ShadowMaterial({opacity:.22}));gnd.rotation.x=-Math.PI/2;gnd.receiveShadow=true;scene.add(gnd);
+  const pad=new T.Mesh(new T.CircleGeometry(5.2,64),mat({color:0xd9dbe2,roughness:1}));pad.rotation.x=-Math.PI/2;pad.position.y=-.005;pad.receiveShadow=true;scene.add(pad);
+  let visible=true;const io=new IntersectionObserver(es=>visible=es[0].isIntersecting);io.observe(el);
+  const ro=new ResizeObserver(()=>{renderer.setSize(W(),H());cam.aspect=W()/H();cam.updateProjectionMatrix()});ro.observe(el);
+  ctl.addEventListener("start",()=>{ctl.autoRotate=false;clearTimeout(spin&&spin.t)});
+  ctl.addEventListener("end",()=>{if(!reduce&&spin)spin.t=setTimeout(()=>ctl.autoRotate=true,2500)});
+  spin={renderer,io,ro,raf:0};
+  const loop=()=>{spin.raf=requestAnimationFrame(loop);if(!visible||!dlg.open)return;ctl.update();renderer.render(scene,cam)};loop();
+  el.querySelector(".spin-msg").textContent="Drag to turn it";
+}
+
+/* flipbook */
+const BLANK="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3Crect width='1' height='1' fill='%23ffffff'/%3E%3C/svg%3E";
+function wireBooks(root){root.querySelectorAll(".book").forEach(b=>{
+  const PAGES=58,HALVES=PAGES+2,S=HALVES/2;let sp=0,busy=false;
+  const src=h=>(h<=0||h>PAGES)?BLANK:`${MD}dgp-${String(h).padStart(2,"0")}.jpg`;
+  const L=b.querySelector(".pg.L"),R=b.querySelector(".pg.R"),leaf=b.querySelector(".leaf"),fr=leaf.querySelector(".front"),bk=leaf.querySelector(".back"),cnt=b.querySelector(".bcount");
+  const pre=h=>{if(h>=1&&h<=PAGES){const i=new Image();i.src=src(h)}};
+  const show=()=>{L.src=src(sp*2);R.src=src(sp*2+1);L.alt=sp*2?`Dining guide page ${sp*2}`:"";R.alt=sp*2+1<=PAGES?`Dining guide page ${sp*2+1}`:"";
+    cnt.textContent=`Spread ${sp+1} of ${S}`;b.querySelector(".bprev").disabled=sp===0;b.querySelector(".bnext").disabled=sp===S-1;[1,2,3,4].forEach(k=>pre(sp*2+1+k))};
+  const turn=dir=>{const t=sp+dir;if(busy||t<0||t>=S)return;
+    if(reduce){sp=t;show();return}
+    busy=true;leaf.hidden=false;
+    if(dir>0){leaf.className="leaf right";fr.src=src(sp*2+1);bk.src=src(t*2);R.src=src(t*2+1)}
+    else{leaf.className="leaf left";fr.src=src(sp*2);bk.src=src(t*2+1);L.src=src(t*2)}
+    const a=leaf.animate([{transform:"rotateY(0deg)"},{transform:`rotateY(${dir>0?-180:180}deg)`}],{duration:700,easing:"cubic-bezier(.45,.05,.3,1)"});
+    a.onfinish=()=>{sp=t;show();leaf.hidden=true;busy=false}};
+  b.querySelector(".bnext").onclick=()=>turn(1);b.querySelector(".bprev").onclick=()=>turn(-1);
+  R.addEventListener("click",()=>turn(1));L.addEventListener("click",()=>turn(-1));
+  b.addEventListener("keydown",e=>{if(e.key==="ArrowRight"){e.preventDefault();turn(1)}if(e.key==="ArrowLeft"){e.preventDefault();turn(-1)}});
+  show();
+})}
+const dlg=document.getElementById("case");let cur_=0;
+const EASE="cubic-bezier(.2,.8,.2,1)";
+function fill(p){
+  document.getElementById("caseArt").innerHTML=art(p)+`<div class="osd osd-ch">${ch(cur_)}</div><button class="case-close" id="caseClose" aria-label="Close">×</button>`;
+  document.getElementById("caseClose").onclick=closeCase;
+  document.getElementById("caseSide").innerHTML=[["Role",p.role],["Team",p.team],["Tools",p.tools],["Year",p.year],p.award?["Recognition",p.award+", Collegiate Advertising Awards"]:null].filter(Boolean).map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join("");
+  document.getElementById("caseStory").innerHTML=`<div class="label">${p.sub}</div><h2 id="caseTitle">${p.title}</h2><p class="lead">${p.lead}</p>
+   ${p.problem?`<h4>The challenge</h4><p>${p.problem}</p>`:""}
+   ${p.steps?`<h4>What I did</h4><ol>${p.steps.map(s=>`<li>${s}</li>`).join("")}</ol>`:""}
+   ${p.result?`<div class="result"><h4>Result</h4><p>${p.result}</p></div>`:""}
+   ${p.rich?`<a class="jump" href="#caseRich" onclick="event.preventDefault();document.getElementById('caseRich').scrollIntoView({behavior:'smooth'})">See the work ↓</a>`:""}
+   <div class="links">${p.links.map(([l,u],k)=>`<a class="btn${k===0?" solid":""}" href="${u}" target="_blank" rel="noopener">${l} ↗</a>`).join("")}</div>`;
+  const rich=document.getElementById("caseRich");
+  rich.innerHTML=p.rich||"";rich.hidden=!p.rich;
+  const ba=rich.querySelector("#ba");
+  if(ba){const r=ba.querySelector("input");r.addEventListener("input",()=>ba.style.setProperty("--x",r.value+"%"))}
+  rich.querySelectorAll("video").forEach(v=>{v.removeAttribute("autoplay");v.setAttribute("data-auto","")});
+  stopSpin();const sp=rich.querySelector("#spin3d");if(sp)init3d(sp);
+  wireBooks(rich);wireVideos(rich);wireVideos(document.getElementById("caseArt"));wireScrollers(rich);wireFlips(rich);
+  const nx=P[(cur_+1)%P.length];document.getElementById("nextBtn").innerHTML=`Next: ${nx.title} →`;
+}
+function openCase(i,push=true,fromEl){
+  cur_=(i+P.length)%P.length;const p=P[cur_];
+  if(!dlg.open){
+    fill(p);dlg.showModal();dlg.scrollTop=0;
+    if(!reduce){const d=dlg.getBoundingClientRect();const r=fromEl&&fromEl.getBoundingClientRect();
+      if(r&&r.width){const dx=(r.left+r.width/2)-(d.left+d.width/2),dy=(r.top+r.height/2)-(d.top+d.height/2);
+        dlg.animate([{transform:`translate(${dx}px,${dy}px) scale(${Math.max(.25,r.width/d.width)})`,opacity:.3,borderRadius:"14px"},{transform:"none",opacity:1}],{duration:520,easing:EASE})}
+      else dlg.animate([{transform:"translateY(28px)",opacity:0},{transform:"none",opacity:1}],{duration:380,easing:EASE})}
+  }else{
+    const out=reduce?null:dlg.animate([{opacity:1},{opacity:0}],{duration:160,easing:"ease-in"});
+    const swap=()=>{fill(p);dlg.scrollTop=0;if(!reduce)dlg.animate([{opacity:0,transform:"translateX(28px)"},{opacity:1,transform:"none"}],{duration:380,easing:EASE})};
+    if(out)out.onfinish=swap;else swap();
+  }
+  if(push&&location.hash!=="#"+p.id)history.replaceState(null,"","#"+p.id);
+}
+function closeCase(){if(reduce||!dlg.open)return dlg.close();const a=dlg.animate([{opacity:1,transform:"none"},{opacity:0,transform:"translateY(18px) scale(.98)"}],{duration:200,easing:"ease-in"});a.onfinish=()=>dlg.close()}
+dlg.addEventListener("close",()=>{stopSpin();dlg.querySelectorAll("video").forEach(v=>v.pause());if(P.some(p=>"#"+p.id===location.hash))history.replaceState(null,"","#work")});
+dlg.addEventListener("click",e=>{if(e.target===dlg)closeCase()});
+document.getElementById("nextBtn").onclick=()=>openCase(cur_+1);
+document.getElementById("prevBtn").onclick=()=>openCase(cur_-1);
+const route=()=>{const i=P.findIndex(p=>"#"+p.id===location.hash);if(i>-1)openCase(i,false)};
+addEventListener("hashchange",route);route();
+
+/* lightbox */
+const lb=document.getElementById("lb");
+dlg.addEventListener("click",e=>{const s=e.target.closest("[data-lb]");if(!s)return;
+  document.getElementById("lbImg").src=s.dataset.lb;document.getElementById("lbImg").alt=s.dataset.cap;
+  document.getElementById("lbCap").textContent=s.dataset.cap;lb.showModal();});
+document.getElementById("lbClose").onclick=()=>lb.close();
+lb.addEventListener("click",e=>{if(e.target===lb)lb.close()});
+
+/* copy */
+const toast=document.getElementById("toast");
+const show=m=>{toast.textContent=m;toast.hidden=false;clearTimeout(show.t);show.t=setTimeout(()=>toast.hidden=true,1800)};
+document.getElementById("copy").addEventListener("click",()=>{const el=document.getElementById("email");
+  const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);show("Email selected")};
+  if(navigator.clipboard)navigator.clipboard.writeText(el.textContent).then(()=>show("Email copied")).catch(sel);else sel();});
+</script>
+
+</html>
